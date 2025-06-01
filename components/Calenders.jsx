@@ -43,7 +43,8 @@ export default function Example() {
         </div>
 
         <div className="max-w-[850px] transition-all ease-in-out duration-200 pl-[4px]">
-          {isGithub ? <GitHubCalender /> : <LeetCodeCalender />}
+          {/* {isGithub ? <GitHubCalender /> : <LeetCodeCalender />} */}
+          {isGithub ? <GitHubCalender /> : <div>No LeetCode</div> }
         </div>
 
         <div className="flex-col justify-center "></div>
