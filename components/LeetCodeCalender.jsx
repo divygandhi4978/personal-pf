@@ -1,77 +1,79 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import dynamic from 'next/dynamic';
-
-// Dynamically import with error handling
-const LeetCodeCalendar = dynamic(() => import('leetcode-calendar'), {
-  ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center h-32">
-      <div className="animate-pulse text-gray-500">Loading LeetCode calendar...</div>
-    </div>
-  )
-});
 
 export default function LeetCodeCalendarComponent() {
-  const [hasError, setHasError] = useState(false);
+  const [LeetCodeCalendar, setLeetCodeCalendar] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Only load the component on the client side
+    const loadCalendar = async () => {
+      try {
+        // Polyfill for self reference
+        if (typeof self === 'undefined' && typeof window !== 'undefined') {
+          window.self = window;
+        }
+        
+        const { default: Calendar } = await import('leetcode-calendar');
+        setLeetCodeCalendar(() => Calendar);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error loading calendar:', err);
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    loadCalendar();
+  }, []);
 
   // Custom theme with GitHub-like green colors, from light to dark
   const customTheme = {
     dark: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
   };
 
-  useEffect(() => {
-    // Reset error state when component mounts
-    setHasError(false);
-  }, []);
-
-  if (hasError) {
+  if (loading) {
     return (
-      <div className="p-4 border border-gray-200 rounded bg-gray-50">
-        <p className="text-gray-600">Unable to load LeetCode calendar. Please try again later.</p>
+      <div className="scale-x-95">
+        <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+          <span className="text-gray-600">Loading LeetCode calendar...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="scale-x-95">
+        <div className="p-4 border border-red-200 rounded bg-red-50">
+          <p className="text-red-600">Failed to load calendar</p>
+          <p className="text-sm text-gray-600">Error: {error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!LeetCodeCalendar) {
+    return (
+      <div className="scale-x-95">
+        <div className="p-4 border border-gray-200 rounded bg-gray-50">
+          <p className="text-gray-600">Calendar not available</p>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="scale-x-95">
-      <ErrorBoundary onError={() => setHasError(true)}>
-        <LeetCodeCalendar
-          username="divygandhi4978"
-          blockSize={15}     
-          blockMargin={3}  
-          fontSize={14}      
-          theme={customTheme}  
-        />
-      </ErrorBoundary>
+      <LeetCodeCalendar
+        username="divygandhi4978"
+        blockSize={15}     
+        blockMargin={3}  
+        fontSize={14}      
+        theme={customTheme}  
+      />
     </div>
   );
-}
-
-// Simple error boundary component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('LeetCode Calendar Error:', error, errorInfo);
-    if (this.props.onError) {
-      this.props.onError();
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return null;
-    }
-
-    return this.props.children;
-  }
 }
