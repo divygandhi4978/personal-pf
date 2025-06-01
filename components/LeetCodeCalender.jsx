@@ -1,11 +1,24 @@
-import dynamic from "next/dynamic";
+'use client';
 
-const LeetCodeCalendarComponent = dynamic(() => import("../components/LeetCodeCalendarComponent"), { ssr: false });
+import React from "react";
+import LeetCodeCalendar from "leetcode-calendar";
 
-export default function Home() {
+export default function LeetCodeCalendarComponent() {
+  // Custom theme with GitHub-like green colors, from light to dark
+  const customTheme = {
+    dark: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+  };
+
   return (
-    <div>
-      <LeetCodeCalendarComponent />
+    <div className="scale-x-95">
+      <LeetCodeCalendar
+        username="divygandhi4978"
+        blockSize={15}     
+        blockMargin={3}  
+        fontSize={14}      
+        theme={customTheme}  
+      />
     </div>
   );
 }
+
