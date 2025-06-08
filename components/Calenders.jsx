@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import LeetCodeCalender from "./LeetCodeCalender";
+// import LeetCodeCalender from "./LeetCodeCalender";
 import GitHubCalender from "./GitHubCalender";
 
 export default function Example() {
@@ -13,7 +13,7 @@ export default function Example() {
 
   return (
     <div className="max-w-screen mt-10 flex-col justify-center">
-      <div>
+      {/* <div>
         <h1 className="text-start text-4xl  sm:text-5xl my-5 font-semibold">Calender</h1>
         <div
           className="relative w-48 h-12 bg-[#030303] rounded-md cursor-pointer transition-all duration-300 ease-in-out mb-5"
@@ -40,7 +40,7 @@ export default function Example() {
           >
             <span className="text-sm font-medium">LeetCode</span>
           </div>
-        </div>
+        </div> */}
 
         <div className="max-w-[850px] transition-all ease-in-out duration-200 pl-[4px]">
           {/* {isGithub ? <GitHubCalender /> : <LeetCodeCalender />} */}
@@ -49,6 +49,6 @@ export default function Example() {
 
         <div className="flex-col justify-center "></div>
       </div>
-    </div>
+    // </div>
   );
 }
