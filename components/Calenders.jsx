@@ -12,9 +12,11 @@ export default function Example() {
   };
 
   return (
-    <div className="max-w-screen mt-10 flex-col justify-center">
+    <div className="max-w-screen mt-10 flex-col justify-center mb-5">
+      <h1 className="text-center text-4xl font-medium mt-20 mb-10">
+          GitHub HitMap
+        </h1>
       {/* <div>
-        <h1 className="text-start text-4xl  sm:text-5xl my-5 font-semibold">Calender</h1>
         <div
           className="relative w-48 h-12 bg-[#030303] rounded-md cursor-pointer transition-all duration-300 ease-in-out mb-5"
           onClick={handleToggle}

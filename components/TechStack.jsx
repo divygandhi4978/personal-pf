@@ -1,11 +1,25 @@
-import React from 'react'
+import FrontendSkills from "./FrontEndSkills";
+import BackendSkills from "./BackendSkills";
+import DevopsAndTools from "./DevopsAndTools";
 
 const TechStack = () => {
   return (
     <div>
-      TechStack
+      <div>
+        <h1 className="text-center text-4xl font-medium mt-20 mb-10">
+          Technical Skills
+        </h1>
+        <section>
+          <h1 className="font-bold text-2xl my-5 prpl">Frontend</h1>
+          <FrontendSkills />
+          <h1 className="font-bold text-2xl my-5 prpl">Backend</h1>
+          <BackendSkills />
+          <h1 className="my-5 font-bold text-2xl prpl">DevOps & Tools</h1>
+          <DevopsAndTools />
+        </section>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TechStack
+export default TechStack;
