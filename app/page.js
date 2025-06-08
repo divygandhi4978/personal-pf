@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <Home/>
-      lorem2000
+     
     </div>
   )
 }

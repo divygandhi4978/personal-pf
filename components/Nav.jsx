@@ -8,7 +8,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-[80px] sm:mt-3 sticky top-0.5">
+      <div className="flex items-center justify-center min-h-[80px] sm:mt-3 sticky top-0.5 z-100">
         <nav className="flex items-center space-x-1 sm:space-x-3 backdrop-blur-sm p-2 rounded-4xl shadow-lg">
           {tabs.map((tab) => (
             <button
