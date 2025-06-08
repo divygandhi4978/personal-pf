@@ -4,6 +4,8 @@ import Projects from "@/components/Projects";
 import Hero from "@/components/Hero";
 import TechStack from "@/components/TechStack";
 import React from "react";
+import Conclusion from "@/components/Conclusion";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
         <TechStack />
         <Calenders />
         <Projects />
+        <Conclusion/>
+        <ContactForm/>
       </div>
     </div>
   );
