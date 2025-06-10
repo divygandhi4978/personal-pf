@@ -3,7 +3,7 @@ import React from 'react'
 const AboutMe = () => {
   return (
     <div>
-      AboutMe
+      Dne for day
     </div>
   )
 }
