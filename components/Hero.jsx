@@ -19,7 +19,7 @@ const PortfolioHero = () => {
           </p>
 
           <div className="flex">
-            <button className="bprpl text-white px-5 py-2 rounded-full text-lg justify-start">
+            <button className="bg-[#195CBA] text-white px-5 py-2 rounded-full text-lg justify-start">
               Get in Touch
             </button>
           </div>

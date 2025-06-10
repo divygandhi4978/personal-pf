@@ -8,7 +8,7 @@ const Conclusion = () => {
 
       <div className="sm:flex justify-between items-center">
         <div className="text-xl sm:max-w-3/5">
-          Hi, I’m <span className="text-[#9575a0] font-bold"> Divy Gandhi</span>
+          Hi, I’m <span className="text-[#2c75db] font-bold"> Divy Gandhi</span>
           , a passionate Web Developer with a keen eye for creating seamless and
           engaging digital experiences. With a strong foundation in front-end
           and back-end web technologies, I thrive at the intersection of design

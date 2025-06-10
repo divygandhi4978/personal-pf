@@ -15,6 +15,7 @@ export default function Projects() {
           return (
               <SingleProject
               key={item.head}
+              skills={item.skills}
                 head={item.head}
                 data={item.data}
                 preview={item.preview}
