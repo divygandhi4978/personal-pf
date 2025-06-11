@@ -2,7 +2,7 @@ import React from "react";
 
 const EducationCard = () => {
   return (
-    <div id="About" className="max-sm:pt-16">
+    <div id="About" className="pt-16">
       <div className="sm:flex justify-center items-center">
         <div>
           <div className="bg-[#191a1f] rounded-xl m-3 p-6 max-w-md mx-auto border border-gray-600 hover:border-[#562e66] transition-all duration-300">
