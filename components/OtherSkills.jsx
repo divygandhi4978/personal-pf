@@ -7,7 +7,7 @@ const OtherSkills = () => {
         {skills.map((skill) => (
           <div
             key={skill}
-            className="bg-[#1E1E1E] flex justify-center items-center px-4 py-2 rounded-lg"
+            className="bg-[#191a1f] flex justify-center items-center px-4 py-2 rounded-lg"
           >
             <h1 className="text-sm text-white sm:text-lg">{skill}</h1>
           </div>
