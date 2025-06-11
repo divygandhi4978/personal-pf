@@ -1,6 +1,7 @@
 import FrontendSkills from "./FrontEndSkills";
 import BackendSkills from "./BackendSkills";
 import DevopsAndTools from "./DevopsAndTools";
+import OtherSkills from "./OtherSkills";
 
 const TechStack = () => {
   return (
@@ -16,6 +17,8 @@ const TechStack = () => {
           <BackendSkills />
           <h1 className="my-5 font-bold text-2xl prpl">DevOps & Tools</h1>
           <DevopsAndTools />
+          <h1 className="my-5 font-bold text-2xl prpl">Others</h1>
+          <OtherSkills/>
         </section>
       </div>
     </div>

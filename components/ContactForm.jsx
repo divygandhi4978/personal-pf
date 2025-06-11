@@ -5,10 +5,11 @@ const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", org: "", msg: "" });
 
   const [err, setErr] = useState(0);
+  const [errMsg, setErrMsg] = useState("");
   const [record, setRecord] = useState(0);
 
   const handelChange = (field, value) => {
-    setForm({ ...form, [field]: value });
+    setForm((prev) => ({ ...prev, [field]: value }));
   };
 
   const FormField = ({ number, tag, type, id, placeholder }) => {
@@ -45,17 +46,29 @@ const ContactForm = () => {
   const checkData = () => {
     if (record) {
       return;
+    } else {
+      if (!form.name.trim()) setErrMsg("Name is required.");
+      if (form.name.length < 2 || form.name.length > 50)
+        setErrMsg("Name should be 2–50 characters.");
+
+      if (!form.email.trim()) setErrMsg("Email is required.");
+      if (!form.msg.trim()) setErrMsg("Message is required.");
+      if (form.msg.length < 10)
+        setErrMsg("Message should be at least 10 characters.");
     }
-    if (form.name == "" || form.email == "" || form.msg == "") {
+
+    if (errMsg) {
       setErr(1);
-      return;
+    } else {
+      //api call for record
+
+      setRecord(1);
     }
-    setRecord(1);
   };
 
   return (
-    <div>
-      <h1 className="text-start max-w-2xl sm:text-6xl text-5xl font-medium mt-30 mb-10">
+    <div className="font-mono">
+      <h1 className="text-start max-w-2xl sm:text-6xl text-4xl font-light mt-30 mb-10 max-sm:font-bold">
         Let's start a project together
       </h1>
 
@@ -96,7 +109,10 @@ const ContactForm = () => {
 
       {err == 1 && (
         <div className="text-red-500 ml-10 text-xl flex justify-end">
-          <h5>Please enter valid Details.</h5>
+          <div>
+            <h5>Please enter valid Details.</h5>
+            <h5>{errMsg}</h5>
+          </div>
         </div>
       )}
 
