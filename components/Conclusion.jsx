@@ -4,7 +4,7 @@ import profile from "../constants/images/profile1.jpg";
 const Conclusion = () => {
   return (
     <div className="max-w-4xl">
-      <h1 className="text-center text-4xl font-medium mt-20 mb-10">About Me</h1>
+      <h1 className="text-center text-4xl font-medium mt-20 ">About Me</h1>
 
       <div className="sm:flex justify-between items-center">
         <div className="text-xl sm:max-w-3/5 font">

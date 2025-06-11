@@ -59,7 +59,7 @@ const SingleProject = ({ head, data, source, preview, img,skills }) => {
           </div>
         </div>
         <div className="sm:w-2/3 relative">
-          <div className="absolute top-[50px] -right-[60px] sm:-right-[50px] object-cover rounded-lg">
+          <div className="absolute top-[3px] -right-[60px] sm:-right-[50px] object-cover rounded-lg">
             <Image
               className="rounded-md h-[300px] sm:h-[350px] "
               src={img}

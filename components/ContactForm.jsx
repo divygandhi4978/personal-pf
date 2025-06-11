@@ -61,13 +61,23 @@ const ContactForm = () => {
       setErr(1);
     } else {
       //api call for record
-
+      sendData();
       setRecord(1);
     }
   };
 
+  const sendData = async () => {
+    await fetch("/api/save-form", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+  };
+
   return (
-    <div className="font-mono">
+    <div className="font-mono pt-2 sm:pt-10" id="Contact">
       <h1 className="text-start max-w-2xl sm:text-6xl text-4xl font-light mt-30 mb-10 max-sm:font-bold">
         Let's start a project together
       </h1>

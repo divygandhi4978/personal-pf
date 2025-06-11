@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutMe = () => {
   return (
-    <div>
+    <div id='About' className='pt-20'>
       Dne for day
     </div>
   )

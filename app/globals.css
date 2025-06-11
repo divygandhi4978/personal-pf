@@ -45,3 +45,7 @@ body {
 .bprpl {
   background: var(--prpl);
 }
+
+html{
+  scroll-behavior: smooth;
+}
