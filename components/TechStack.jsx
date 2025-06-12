@@ -11,13 +11,13 @@ const TechStack = () => {
           Technical Skills
         </h1>
         <section>
-          <h1 className="font-bold text-2xl my-5 prpl">Frontend</h1>
+          <h1 className="font-bold text-2xl my-5 text-[#956c8a]">Frontend</h1>
           <FrontendSkills />
-          <h1 className="font-bold text-2xl my-5 prpl">Backend</h1>
+          <h1 className="font-bold text-2xl my-5   text-[#956c8a]">Backend</h1>
           <BackendSkills />
-          <h1 className="my-5 font-bold text-2xl prpl">DevOps & Tools</h1>
+          <h1 className="my-5 font-bold text-2xl  text-[#956c8a]">DevOps & Tools</h1>
           <DevopsAndTools />
-          <h1 className="my-5 font-bold text-2xl prpl">Others</h1>
+          <h1 className="my-5 font-bold text-2xl  text-[#956c8a]">Others</h1>
           <OtherSkills/>
         </section>
       </div>

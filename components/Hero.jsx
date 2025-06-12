@@ -1,8 +1,12 @@
 import React from "react";
+// import resume from "../public/resume.pdf";
 
 const PortfolioHero = () => {
   return (
-    <div className="sm:h-screen text-white py-18 sm:py-24 max-h-[1200px] " id="Home">
+    <div
+      className="sm:h-screen text-white py-18 sm:py-24 max-h-[1200px] "
+      id="Home"
+    >
       <div className="flex flex-col items-center justify-center px-2 sm:px-8 pt-13 text-center">
         <div className="sm:w-6/7 font-mono">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-3 text-start">
@@ -20,11 +24,18 @@ const PortfolioHero = () => {
 
           <div className="flex space-x-5">
             <a href="https://in.linkedin.com/in/divy-gandhi-9713b6284">
-              <button className="bg-[#195CBA] text-white px-5 py-2 rounded-full text-lg justify-start">
+              <button className="bg-[#195CBA] text-white px-5 py-2 rounded-full text-lg justify-start  cursor-pointer">
                 Get in Touch
               </button>
             </a>
 
+            <div className="max-sm:hidden cursor-pointer">
+              <a href="/resume-divy.pdf"  target="_main">
+                <button className="bg-[#513063] text-white px-5 py-2 rounded-full text-lg justify-start  cursor-pointer">
+                  Resume
+                </button>
+              </a>
+            </div>
             <a
               href="https://github.com/divygandhi4978"
               target="_main"
@@ -52,6 +63,13 @@ const PortfolioHero = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="ml-2 mt-4 sm:hidden cursor-pointer">
+        <a href="/resume-divy.pdf"  target="_main">
+          <button className="bg-[#513063] text-white px-5 py-2 rounded-full text-lg justify-start">
+            Resume
+          </button>
+        </a>
       </div>
     </div>
   );

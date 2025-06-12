@@ -1,6 +1,5 @@
 import securehold from "../images/securehold.png";
 import urlshortner from "../images/urlshortner.png";
-import skills from "./backend";
 
 const list = [
   {
@@ -9,7 +8,7 @@ const list = [
     preview: "https://secure-hold-1.onrender.com/",
     source: "https://github.com/divygandhi4978/secure-hold",
     img: securehold,
-    skills:["MERN",'MongoDB',"JWT"]
+    skills:["MERN","JWT"]
   },
   {
     head: "URLShortner",
