@@ -34,10 +34,6 @@ body {
   font-family: "Inter", 'Lexend';
 }
 
-.font {
-  font-family: "Inter";
-}
-
 .prpl {
   color: var(--prpl);
 }
