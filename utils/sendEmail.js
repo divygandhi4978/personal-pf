@@ -56,7 +56,6 @@ const sendMail = async ({ senderName, senderEmail, senderOrg, senderMsg }) => {
         <div>
             <h2>Hello <strong> ${senderName}</strong>, Thank you for getting in touch!</h2>
             <p>I've received your message and appreciate you reaching out.</p>
-            <hr>
             <p><strong>Your Message :</strong> ${senderMsg} </p>
             <hr>
             <p>Looking forward to speaking with you soon!</p>
