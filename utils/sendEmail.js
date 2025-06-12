@@ -30,20 +30,41 @@ const sendMail = async ({ senderName, senderEmail, senderOrg, senderMsg }) => {
     });
 
     // To client
+    //Design - 1
+//     await transporter.sendMail({
+//       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
+//       to: senderEmail,
+//       subject: `New message from ${senderName}`,
+//       html: `<div style="background-color:#191a1f; border-radius: 10px; ">
+//         <div style="font-family: monospace, Arial, sans-serif; line-height: 1.6; padding: 5px; padding-left: 10px; padding-right: 10px;">
+//             <h2 style="color: #5b62b1;">Hello ${senderName}, Thank you for getting in touch!</h2>
+//             <p style="color: #adabbd;">I've received your message and appreciate you reaching out.</p>
+//             <p style="color: #adabbd; background-color: #30303d ;padding:15px;border-radius: 10px;"><strong>Your Message :</strong> ${senderMsg} </p>
+//             <p style="color: #adabbd;">Looking forward to speaking with you soon!</p>
+//         </div>
+//     </div>
+//  `,
+//     });
+
+
+//Design-2
     await transporter.sendMail({
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
       to: senderEmail,
       subject: `New message from ${senderName}`,
-      html: `<div style="background-color:#191a1f; border-radius: 10px; ">
-        <div style="font-family: monospace, Arial, sans-serif; line-height: 1.6; padding: 5px; padding-left: 10px; padding-right: 10px;">
-            <h2 style="color: #5b62b1;">Hello ${senderName}, Thank you for getting in touch!</h2>
-            <p style="color: #adabbd;">I've received your message and appreciate you reaching out.</p>
-            <p style="color: #adabbd; background-color: #30303d ;padding:15px;border-radius: 10px;"><strong>Your Message :</strong> ${senderMsg} </p>
-            <p style="color: #adabbd;">Looking forward to speaking with you soon!</p>
+      html: `<div>
+        <div>
+            <h2>Hello <strong> ${senderName}</strong>, Thank you for getting in touch!</h2>
+            <p>I've received your message and appreciate you reaching out.</p>
+            <hr>
+            <p><strong>Your Message :</strong> ${senderMsg} </p>
+            <hr>
+            <p>Looking forward to speaking with you soon!</p>
         </div>
     </div>
  `,
     });
+
 
     console.log("Email sent successfully to ",senderEmail);
   } catch (err) {
