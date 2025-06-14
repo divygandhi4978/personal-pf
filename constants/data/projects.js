@@ -1,5 +1,6 @@
 import securehold from "../images/securehold.png";
 import urlshortner from "../images/urlshortner.png";
+import portfolio from "../images/portfolio.png";
 
 const list = [
   {
@@ -17,6 +18,14 @@ const list = [
     source: "https://github.com/divygandhi4978/urlShortner",
     img: urlshortner,
     skills:["ReactJs",'NodeJs',"Express"]
+  },
+  {
+    head: "Personal portfolio",
+    data: "Project display with personal info including tech stack",
+    preview: "https://personal-pf-alpha.vercel.app/",
+    source: "https://github.com/divygandhi4978/personal-pf",
+    img: portfolio,
+    skills:["NextJs","NodeMailer"]
   },
 ];
 
