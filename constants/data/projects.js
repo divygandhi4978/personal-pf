@@ -1,6 +1,7 @@
 import securehold from "../images/securehold.png";
 import urlshortner from "../images/urlshortner.png";
 import portfolio from "../images/portfolio.png";
+import newsletter from "../images/newsletter.png";
 
 const list = [
   {
@@ -25,6 +26,14 @@ const list = [
     preview: "https://personal-pf-alpha.vercel.app/",
     source: "https://github.com/divygandhi4978/personal-pf",
     img: portfolio,
+    skills:["NextJs","NodeMailer"]
+  },
+  {
+    head: "Money Moves",
+    data: "Articles displayed",
+    preview: "https://moneymoves1.netlify.app/",
+    source: "https://github.com/divygandhi4978/personal-pf",
+    img: newsletter,
     skills:["NextJs","NodeMailer"]
   },
 ];
