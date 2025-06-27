@@ -6,7 +6,7 @@ import newsletter from "../images/newsletter.png";
 const list = [
   {
     head: "Money Moves",
-    data: "Articles displayed",
+    data: "Articles about product , Marketing and Finance.",
     preview: "https://moneymoves1.netlify.app/",
     source: "https://github.com/divygandhi4978/personal-pf",
     img: newsletter,
