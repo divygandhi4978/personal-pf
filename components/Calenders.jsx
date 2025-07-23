@@ -14,7 +14,7 @@ export default function Example() {
   return (
     <div className="max-w-screen mt-10 flex-col justify-center mb-5">
       <h1 className="text-center text-4xl font-medium mt-20 mb-10">
-          GitHub HitMap
+          My Contributions
         </h1>
       {/* <div>
         <div

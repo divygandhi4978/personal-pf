@@ -76,6 +76,23 @@ const EducationCard = () => {
           </div>
         </div>
       </div>
+      <div className="sm:flex justify-center items-center max-sm:my-10 my-15 w-full sm:hidden">
+        <div className="w-full  text-left px-4">
+          <div className="text-white font-black text-5xl lg:text-6xl leading-none tracking-tight">
+            <div className="mb-2">CODE</div>
+            <div className="mb-2">Ship</div>
+            <div className="mb-1">REPEAT.</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="sm:flex justify-center items-center max-sm:my-10 my-15 w-full">
+        <div className="w-full  text-center px-4">
+          <div className="text-white font-black text-4xl lg:text-6xl leading-none tracking-tight max-sm:hidden">
+            <div className="mb-2">CODE Ship REPEAT.</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

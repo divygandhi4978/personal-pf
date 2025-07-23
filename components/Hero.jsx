@@ -1,5 +1,6 @@
 import React from "react";
 // import resume from "../public/resume.pdf";
+import { LiquidDropLoader } from "react-loaderkit";
 
 const PortfolioHero = () => {
   return (
@@ -22,6 +23,14 @@ const PortfolioHero = () => {
             and improving problem-solving skills for scalable applications.
           </p>
 
+          <p className="text-gray-500 text-lg md:text-xl max-w-3xl leading-relaxed mb-12 text-start flex items-center space-x-3.5">
+            <span>
+              <LiquidDropLoader size={28} color="#62fe7c" speed={1.2} />
+            </span>
+            
+            <span> Available for Hire</span>{" "}
+          </p>
+
           <div className="flex space-x-5">
             <a href="https://in.linkedin.com/in/divy-gandhi-9713b6284">
               <button className="bg-[#195CBA] text-white px-5 py-2 rounded-full text-lg justify-start  cursor-pointer">
@@ -30,7 +39,7 @@ const PortfolioHero = () => {
             </a>
 
             <div className="max-sm:hidden cursor-pointer">
-              <a href="/resume-divy.pdf"  target="_main">
+              <a href="/resume-divy.pdf" target="_main">
                 <button className="bg-[#513063] text-white px-5 py-2 rounded-full text-lg justify-start  cursor-pointer">
                   Resume
                 </button>
@@ -65,7 +74,7 @@ const PortfolioHero = () => {
         </div>
       </div>
       <div className="ml-2 mt-4 sm:hidden cursor-pointer">
-        <a href="/resume-divy.pdf"  target="_main">
+        <a href="/resume-divy.pdf" target="_main">
           <button className="bg-[#513063] text-white px-5 py-2 rounded-full text-lg justify-start">
             Resume
           </button>

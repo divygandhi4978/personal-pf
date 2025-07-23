@@ -3,7 +3,7 @@ import React from "react";
 
 const SingleProject = ({ head, data, source, preview, img,skills }) => {
   return (
-    <div className="bg-[#1E1E1E] rounded-2xl sticky top-20 h-[450px] sm:h-[400px] my-10 p-5 overflow-hidden">
+    <div className="bg-[#1E1E1E] rounded-2xl sticky top-20 h-[450px] sm:h-[400px] my-10 p-5 overflow-hidden hover:bg-[#212121] transition-all ease-in duration-100">
       <div className="sm:flex justify-around">
         <div className="sm:w-1/3 h-fit pl-3 pt-7">
           <h1 className="font-bold text-3xl text-[#9C6A8C]">{head}</h1>
@@ -59,7 +59,7 @@ const SingleProject = ({ head, data, source, preview, img,skills }) => {
           </div>
         </div>
         <div className="sm:w-2/3 relative">
-          <div className="absolute top-[3px] -right-[60px] sm:-right-[50px] object-cover rounded-lg">
+          <div className="absolute top-[35px] -right-[60px] sm:-right-[50px] object-cover rounded-lg hover:scale-102 transition-all ease-in duration-75">
             <Image
               className="rounded-md h-[300px] sm:h-[350px] "
               src={img}
