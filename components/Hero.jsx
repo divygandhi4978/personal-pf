@@ -5,7 +5,7 @@ import { LiquidDropLoader } from "react-loaderkit";
 const PortfolioHero = () => {
   return (
     <div
-      className="sm:h-screen text-white py-2 sm:py-24 max-h-[1200px] "
+      className="sm:h-screen text-white py-10 sm:py-24 max-h-[1200px] "
       id="Home"
     >
       <div className="flex flex-col items-center justify-center px-2 sm:px-8 text-center">
