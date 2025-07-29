@@ -1,16 +1,24 @@
 const TechStack = () => {
   const Frontend = ["React", "Next.js", "Tailwind", "Framer Motion"];
-  const Backend = ["Node.js", "Express", "FastAPI", "Python", "DJango", "Java"];
+  const Backend = [
+    "Node.js",
+    "Express",
+    "FastAPI",
+    "Python",
+    "DJango",
+    "Java",
+    "Flask",
+  ];
   const Database = ["MongoDB", "MySQL"];
-  const ML = ["Pandas", "NumPy", "Matplotlib", "Seaborn"];
+  const ML = ["NumPy", "Pandas", "Matplotlib", "Seaborn"];
   const DevOps = ["Git", "Docker"];
 
   return (
     <div>
       <div>
         <h1 className="text-center text-4xl font-medium mt-20 mb-10 space-x-3">
-        
-          <span className="text-white">Tech Stack</span>  <span>
+          <span className="text-white">Tech Stack</span>{" "}
+          <span>
             <span className="text-gray-400 text-4xl font-bold">{"{"}</span>
             <span className="text-gray-400 text-4xl font-bold">{"}"}</span>
           </span>
