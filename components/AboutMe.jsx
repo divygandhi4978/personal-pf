@@ -13,7 +13,7 @@ const EducationCard = () => {
                 </h3>
                 <div>
                   <p>Bachelor's in Computer Science</p>
-                  <p>CPI : 9.02 </p>
+                  <p>CGPA : 8.88 </p>
                   <div className="flex justify-start space-x-3.5">
                     <p className=" mb-3">GEC Gandhinagar </p>
                     <p className=" font-medium">2023 - 2027</p>
