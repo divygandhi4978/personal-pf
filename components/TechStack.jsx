@@ -16,13 +16,13 @@ const TechStack = () => {
   return (
     <div>
       <div>
-        <h1 className="text-center text-4xl font-medium mt-20 mb-10 space-x-3">
-          <span className="text-white">Tech Stack</span>{" "}
+        {/* <h1 className="text-center text-4xl font-medium mt-20 mb-10 space-x-3"> */}
+          {/* <span className="text-white">Tech Stack</span>{" "}
           <span>
             <span className="text-gray-400 text-4xl font-bold">{"{"}</span>
             <span className="text-gray-400 text-4xl font-bold">{"}"}</span>
-          </span>
-        </h1>
+          </span> */}
+        {/* </h1> */}
         <section>
           <h1 className="font-bold text-2xl my-5 text-[#956c8a]">Frontend</h1>
           <div className="space-x-3 space-y-3">
