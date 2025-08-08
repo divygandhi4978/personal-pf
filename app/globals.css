@@ -3,9 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  /* --prpl: #562e66; */
+  --background: #1a1a1a;
+  --foreground: #D8D9D4;
   --prpl: #562e66;
 }
 
