@@ -17,7 +17,7 @@ export default function Home() {
         <TechStack />
         <Calenders />
         <Projects />
-        <Scroller className="px-16"/>
+        <Scroller />
         <Conclusion/>
         <ContactForm/>
       </div>
