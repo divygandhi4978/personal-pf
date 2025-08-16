@@ -23,13 +23,12 @@ const PortfolioHero = () => {
             and improving problem-solving skills for scalable applications.
           </p>
 
-          <p className="text-gray-500 text-lg md:text-xl max-w-3xl leading-relaxed mb-12 text-start flex items-center space-x-3.5">
-            <span>
-              <LiquidDropLoader size={28} color="#62fe7c" speed={1.2} />
-            </span>
-            
-            <span> Available for Hire</span>{" "}
-          </p>
+        <div className="flex items-center space-x-3.5 mb-12">
+  <LiquidDropLoader size={28} color="#62fe7c" speed={1.2} />
+  <span className="text-gray-500 text-lg md:text-xl leading-relaxed">
+    Available for Hire
+  </span>
+</div>
 
           <div className="flex space-x-5">
             <a href="https://in.linkedin.com/in/divy-gandhi-9713b6284">
