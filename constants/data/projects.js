@@ -2,6 +2,7 @@ import securehold from "../images/securehold.png";
 import urlshortner from "../images/urlshortner.png";
 import portfolio from "../images/portfolio.png";
 import newsletter from "../images/newsletter.png";
+import DGMonitor from "../images/water.png";
 
 const list = [
   {
@@ -19,6 +20,14 @@ const list = [
     source: "https://github.com/divygandhi4978/personal-pf",
     img: portfolio,
     skills: ["NextJs", "NodeMailer"],
+  },
+  {
+    head: "DGMonitor",
+    data: "Tracks the water level across multiple point for Vishvamitri River and allows user to add alert triggers based on level",
+    preview: "https://thriving-pasca-979f1d.netlify.app/",
+    source: "#",
+    img: DGMonitor,
+    skills: ["MERN", "Cron",'WebScraping'],
   },
   {
     head: "SecureHold",
