@@ -23,7 +23,7 @@ const list = [
   },
   {
     head: "DGMonitor",
-    data: "Tracks the water level across multiple point for Vishvamitri River and allows user to add alert triggers based on level",
+    data: "Tracks Vishwamitri water levels with custom alerts.",
     preview: "https://thriving-pasca-979f1d.netlify.app/",
     source: "#",
     img: DGMonitor,
