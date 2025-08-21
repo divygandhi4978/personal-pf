@@ -10,7 +10,7 @@ const TechStack = () => {
     "Flask",
   ];
   const Database = ["MongoDB", "MySQL"];
-  const ML = ["NumPy", "Pandas", "Matplotlib", "Seaborn","Streamlit"];
+  const ML = ["NumPy", "Pandas", "Matplotlib", "Seaborn","Streamlit","Scikit-learn"];
   const DevOps = ["Git", "Docker"];
 
   return (
