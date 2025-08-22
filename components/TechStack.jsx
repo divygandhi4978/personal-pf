@@ -10,14 +10,21 @@ const TechStack = () => {
     "Flask",
   ];
   const Database = ["MongoDB", "MySQL"];
-  const ML = ["NumPy", "Pandas", "Matplotlib", "Seaborn","Streamlit","Scikit-learn"];
+  const ML = [
+    "NumPy",
+    "Pandas",
+    "Matplotlib",
+    "Seaborn",
+    "Streamlit",
+    "Scikit-learn",
+  ];
   const DevOps = ["Git", "Docker"];
 
   return (
     <div>
       <div>
         {/* <h1 className="text-center text-4xl font-medium mt-20 mb-10 space-x-3"> */}
-          {/* <span className="text-white">Tech Stack</span>{" "}
+        {/* <span className="text-white">Tech Stack</span>{" "}
           <span>
             <span className="text-gray-400 text-4xl font-bold">{"{"}</span>
             <span className="text-gray-400 text-4xl font-bold">{"}"}</span>
@@ -95,6 +102,18 @@ const TechStack = () => {
             })}
           </div>
         </section>
+        <div>
+          <a
+            href="https://planet-lifter-33b.notion.site/Technical-Stuff-242cd5d8cae480ff9a48e4a9c9b2c23c"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 font-bold text-xl mt-3 inline-block hover:underline"
+          >
+            <span className="relative inline-block px-4 py-1 rounded-md text-md font-mono bg-[#562e66] tracking-wide text-gray-300 border border-gray-600 hover:border-[#562e66] hover:shadow-xl transition duration-300 cursor-pointer">
+              More here...
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   );

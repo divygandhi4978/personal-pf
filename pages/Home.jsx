@@ -9,18 +9,19 @@ import ContactForm from "@/components/ContactForm";
 import Scroller from "@/components/Scroller";
 
 export default function Home() {
-  
   return (
     <div className="sm:flex items-center justify-center ">
       <div className="max-w-4xl">
         <Hero />
         <AboutMe />
+
         <TechStack />
         <Calenders />
         <Projects />
+
         <Scroller />
-        <Conclusion/>
-        <ContactForm/>
+        <Conclusion />
+        <ContactForm />
       </div>
     </div>
   );
