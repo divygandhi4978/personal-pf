@@ -7,6 +7,7 @@ import React from "react";
 import Conclusion from "@/components/Conclusion";
 import ContactForm from "@/components/ContactForm";
 import Scroller from "@/components/Scroller";
+import Current from "@/components/Current";
 
 export default function Home() {
   return (
@@ -14,11 +15,10 @@ export default function Home() {
       <div className="max-w-4xl">
         <Hero />
         <AboutMe />
-
         <TechStack />
         <Calenders />
+        <Current />
         <Projects />
-
         <Scroller />
         <Conclusion />
         <ContactForm />
