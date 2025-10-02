@@ -18,7 +18,7 @@ const TechStack = () => {
     "Streamlit",
     "Scikit-learn",
   ];
-  const DevOps = ["Git", "Docker"];
+  const DevOps = ["Git", "Docker", 'Kubernetes("Overview")'];
 
   return (
     <div>
