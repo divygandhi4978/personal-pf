@@ -8,6 +8,7 @@ import Conclusion from "@/components/Conclusion";
 import ContactForm from "@/components/ContactForm";
 import Scroller from "@/components/Scroller";
 import Current from "@/components/Current";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Calenders />
         <Current />
         <Projects />
+        <Experience/>
         <Scroller />
         <Conclusion />
         <ContactForm />

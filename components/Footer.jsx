@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         <div className="text-sm flex justify-center mt-8 text-gray-400">
-          <p>Last updated - 11 June 2025</p>
+          <p>Last updated - 16 October 2025</p>
         </div>
       </div>
     </footer>

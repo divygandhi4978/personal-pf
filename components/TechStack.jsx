@@ -8,6 +8,7 @@ const TechStack = () => {
     "DJango",
     "Java",
     "Flask",
+    "Redis"
   ];
   const Database = ["MongoDB", "MySQL"];
   const ML = [
