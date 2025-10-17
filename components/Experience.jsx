@@ -17,12 +17,12 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section className="text-white py-16 sm:px-9 lg:px-16">
+    <section className="text-white py-16 sm:px-9 lg:px-16 ">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-center">
         Work Experience
       </h2>
 
-      <div className="max-w-3xl mx-auto space-y-10">
+      <div className="max-w-3xl mx-auto space-y-10 ">
         {experiences.map((exp, index) => (
           <div key={index} className="space-y-3">
             {/* Clickable Logo and Organization Name */}
