@@ -3,6 +3,7 @@ import urlshortner from "../images/urlshortner.png";
 import portfolio from "../images/portfolio.png";
 import newsletter from "../images/newsletter.png";
 import DGMonitor from "../images/water.png";
+import webcrawler from "../images/webcrawler.png";
 
 const list = [
   {
@@ -36,6 +37,14 @@ const list = [
     source: "https://github.com/divygandhi4978/secure-hold",
     img: securehold,
     skills: ["MERN", "JWT"],
+  },
+  {
+    head: "WebCrawler",
+    data: "Visualize how pages connect across the web",
+    preview: "https://webscrawler16.netlify.app/",
+    source: "https://github.com/divygandhi4978/WebCrawler",
+    img: webcrawler,
+    skills: ["ReactJs", "NodeJs", "Express","Crawling"],
   },
   {
     head: "URLShortner",
