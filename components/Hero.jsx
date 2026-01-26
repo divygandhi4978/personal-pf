@@ -1,85 +1,71 @@
 import React from "react";
-// import resume from "../public/resume.pdf";
 import { LiquidDropLoader } from "react-loaderkit";
 
 const PortfolioHero = () => {
   return (
-    <div
-      className="sm:h-screen text-white py-12 sm:py-24 max-h-[1200px] "
+    <section 
+      className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-center py-12 md:py-24 lg:py-32 overflow-hidden bg-black selection:bg-[#562e66] selection:text-white" 
       id="Home"
     >
-      <div className="flex flex-col items-center justify-center px-2 sm:px-8 text-center">
-        <div className="sm:w-6/7 font-mono">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-3 text-start">
-            Divy Gandhi
-          </h1>
+      {/* Background Aura - Adjusted for mobile centering */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[150%] max-w-[1000px] h-[300px] md:h-[400px] bg-[#562e66]/10 blur-[80px] md:blur-[120px] rounded-full pointer-events-none -z-10" />
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#643d73] mb-12 text-start">
-            Software Engineer{" "}
-          </h2>
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 lg:gap-8">
+          
+          {/* Left: Identity & Human Narrative */}
+          <div className="space-y-8 md:space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 max-w-4xl">
+            
+            {/* Minimalist Professional Badge */}
+            <div className="inline-flex items-center space-x-3 bg-white/[0.03] border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm mx-auto lg:mx-0">
+              <LiquidDropLoader size={12} color="#562e66" speed={1.5} />
+              <span className="text-zinc-500 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
+                Currently in Vadodara // Open for global roles
+              </span>
+            </div>
 
-          <p className="text-gray-300 text-lg md:text-xl max-w-3xl leading-relaxed mb-12 text-start">
-            Developer based in Vadodara, India. Focused on writing clean code
-            and improving problem-solving skills for scalable applications.
-          </p>
+            {/* High-Impact Headline - Use responsive text sizes to prevent overflow */}
+            <div className="space-y-4 text-center lg:text-left">
+              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[0.9] lg:leading-[0.85]">
+                Divy Gandhi
+              </h1>
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-light text-[#562e66] tracking-tight italic">
+                Computer Engineer & Finance Aspirant
+              </h2>
+            </div>
 
-        <div className="flex items-center space-x-3.5 mb-12">
-  <LiquidDropLoader size={28} color="#62fe7c" speed={1.2} />
-  <span className="text-gray-500 text-lg md:text-xl leading-relaxed">
-    Available for Hire
-  </span>
-</div>
+            {/* Clear, Minimal Pitch */}
+            <p className="text-zinc-400 text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed font-light mx-auto lg:mx-0 text-center lg:text-left px-4 lg:px-0">
+              I build scalable <span className="text-white font-medium">Full-Stack systems</span> with the analytical rigor required for <span className="text-white font-medium">Equity Research</span>. Specialized in the MERN stack and financial data pipelines.
+            </p>
 
-          <div className="flex space-x-5">
-            <a href="https://in.linkedin.com/in/divy-gandhi-9713b6284">
-              <button className="bg-[#195CBA] text-white px-5 py-2 rounded-full text-lg justify-start  cursor-pointer">
-                Get in Touch
-              </button>
-            </a>
-
-            <div className="max-sm:hidden cursor-pointer">
-              <a href="/resume-divy.pdf" target="_main">
-                <button className="bg-[#513063] text-white px-5 py-2 rounded-full text-lg justify-start  cursor-pointer">
-                  Resume
+            {/* Direct Action Group */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 pt-4">
+              <a href="https://in.linkedin.com/in/divy-gandhi-9713b6284" target="_blank" rel="noreferrer" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-white text-black px-10 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#562e66] hover:text-white transition-all duration-300 active:scale-95 cursor-pointer shadow-xl shadow-white/5">
+                  Contact Me
                 </button>
               </a>
-            </div>
-            <a
-              href="https://github.com/divygandhi4978"
-              target="_main"
-              className="text-gray-300"
-            >
-              <svg viewBox="0 0 24 24" className="w-10 h-10">
-                <path
-                  fill="currentColor"
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                />
-              </svg>
-            </a>
 
-            <a
-              href="https://x.com/divygandhi4978?s=09"
-              target="_main"
-              className="text-gray-300"
-            >
-              <svg viewBox="0 0 24 24" className="w-10 h-10">
-                <path
-                  fill="currentColor"
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                />
-              </svg>
-            </a>
+              <a 
+                href="/resume-divy.pdf" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="group flex items-center gap-3 text-zinc-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-[0.2em] cursor-pointer"
+              >
+                <span>View Resume</span>
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
           </div>
+
+       
+
         </div>
       </div>
-      <div className="ml-2 mt-4 sm:hidden cursor-pointer">
-        <a href="/resume-divy.pdf" target="_main">
-          <button className="bg-[#513063] text-white px-5 py-2 rounded-full text-lg justify-start">
-            Resume
-          </button>
-        </a>
-      </div>
-    </div>
+    </section>
   );
 };
 

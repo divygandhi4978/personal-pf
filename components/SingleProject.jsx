@@ -1,73 +1,76 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
-const SingleProject = ({ head, data, source, preview, img,skills }) => {
+const SingleProject = ({ index, skills, head, data, preview, source, img }) => {
   return (
-    <div className="bg-[#1E1E1E] rounded-2xl sticky top-20 h-[450px] sm:h-[400px] my-10 p-5 overflow-hidden hover:bg-[#212121] transition-all ease-in duration-100">
-      <div className="sm:flex justify-around">
-        <div className="sm:w-1/3 h-fit pl-3 pt-7">
-          <h1 className="font-bold text-3xl text-[#9C6A8C]">{head}</h1>
-          <p className="my-5 text-lg text-blue-50">{data}</p>
+    <div 
+      className="sticky w-full flex items-center justify-center px-4 md:px-6 mb-12"
+      style={{ 
+        top: `${index * 32}px`, // Adjusted offset for mobile
+      }}
+    >
+      <div className="relative w-full max-w-7xl bg-[#0a0a0a] border border-white/10 rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_-20px_50px_rgba(0,0,0,0.8)] group transition-all duration-500 hover:border-[#562e66]/30">
+        
+        {/* Changed h-[70vh] to min-h for responsiveness */}
+        <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[60vh] xl:min-h-[70vh]">
+          
+          {/* Content Section: Priority on Mobile */}
+          <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center space-y-6 md:space-y-8 w-full lg:w-1/2 order-2 lg:order-1">
+            <div className="space-y-3 md:space-y-4">
+              <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-tight group-hover:text-[#562e66] transition-colors duration-300">
+                {head}
+              </h3>
+              <p className="text-white/60 text-base md:text-lg font-light leading-relaxed max-w-md">
+                {data}
+              </p>
+            </div>
 
-          <div className="flex justify-items-start gap-7 text-xl">
-            <a
-              className="hover:underline hover:text-gray-100 transition-all duration-100 ease-in flex items-center space-x-2"
-              href={source}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Source
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="16"
-                fill="currentColor"
-                viewBox="0 0 16 16"
+            {/* Skills / Tech */}
+            <div className="flex flex-wrap gap-2 pt-2">
+              {skills.map((skill, i) => (
+                <span 
+                  key={i} 
+                  className="px-2 md:px-3 py-1 text-[9px] md:text-[10px] font-mono font-bold text-[#562e66] border border-[#562e66]/20 bg-[#562e66]/5 rounded-sm uppercase tracking-widest"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            {/* Links */}
+            <div className="flex items-center gap-6 md:gap-8 pt-4">
+              <a 
+                href={preview} 
+                target="_blank" 
+                rel="noreferrer"
+                className="text-white text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#562e66] transition-colors flex items-center gap-1"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                />
-              </svg>
-            </a>
-            <a
-              className="hover:underline hover:text-gray-100 transition-all duration-100 ease-in flex items-center space-x-2 "
-              href={preview}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Preview
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-up-right"
-                viewBox="0 0 16 16"
+                Live Preview <span className="text-[14px]">↗</span>
+              </a>
+              <a 
+                href={source} 
+                target="_blank" 
+                rel="noreferrer"
+                className="text-white/40 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] hover:text-white transition-colors"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                />
-              </svg>
-            </a>
+                Source Code
+              </a>
+            </div>
           </div>
-          <div className="my-5 overflow-auto space-x-2 scroll-my-0 h-8">
-            {skills?.map((item)=>{
-              return <h1 className="bg-[#040404] inline px-2 text-center rounded-sm py-1" key={item}>{item}</h1>
-            })}
-          </div>
-        </div>
-        <div className="sm:w-2/3 relative">
-          <div className="absolute top-[35px] -right-[60px] sm:-right-[50px] object-cover rounded-lg hover:scale-102 transition-all ease-in duration-75">
+
+          {/* Image Section: Aspect ratio handled for mobile */}
+          <div className="w-full lg:w-1/2 relative min-h-[250px] sm:min-h-[350px] lg:min-h-full bg-white/5 overflow-hidden order-1 lg:order-2">
             <Image
-              className="rounded-md h-[300px] sm:h-[350px] "
               src={img}
-              alt="SecureHold preview"
-              // width={600}
-              // height={700}
+              alt={head}
+              fill
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/40 lg:bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
           </div>
+
         </div>
       </div>
     </div>

@@ -2,98 +2,125 @@ import React from "react";
 
 const EducationCard = () => {
   return (
-    <div id="About" className="pt-16">
-      <div className="sm:flex justify-center items-center">
-        <div>
-          <div className="bg-[#191a1f] rounded-xl m-3 p-6 max-w-md mx-auto border border-gray-600 hover:border-[#562e66] transition-all duration-300">
-            <div className="sm:flex items-start gap-4">
-              <div className="sm:flex-1">
-                <h3 className="text-white text-xl font-semibold mb-2">
-                  Education
-                </h3>
-                <div>
-                  <p>Bachelor's in Computer Science</p>
-                  <p>CGPA : 8.88 </p>
-                  <div className="flex justify-start space-x-3.5">
-                    <p className=" mb-3">GEC Gandhinagar </p>
-                    <p className=" font-medium">2023 - 2027</p>
+    <section id="About" className="py-24 bg-black border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
+          <div className="space-y-4">
+            <span className="text-zinc-500 font-mono text-xs font-bold uppercase tracking-[0.4em]">
+              Background // Experience
+            </span>
+            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-white leading-none">
+              The Foundation.
+            </h2>
+          </div>
+          <div className="hidden md:block text-right">
+             <div className="text-white font-black text-4xl leading-none tracking-tight opacity-10">
+               CODE. SHIP. REPEAT.
+             </div>
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-x-24 gap-y-16">
+          
+          {/* Left Side: Education & Work */}
+          <div className="space-y-16">
+            <div className="space-y-10">
+              <h3 className="text-zinc-400 text-[10px] font-bold uppercase tracking-[0.3em] border-b border-white/10 pb-3">
+                Academic History
+              </h3>
+              <div className="space-y-12">
+                {/* Degree 1 */}
+                <div className="group border-l border-white/20 pl-8 hover:border-white transition-colors duration-500">
+                  <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+                    <h4 className="text-2xl font-bold text-white tracking-tight">Bachelor's in Computer Science</h4>
+                    <span className="text-zinc-500 font-mono text-xs mt-1">2023 — 2027</span>
+                  </div>
+                  <p className="text-zinc-400 text-lg">GEC Gandhinagar</p>
+                  <div className="inline-block mt-4 px-3 py-1 bg-white/5 border border-white/10 rounded-sm">
+                    <p className="text-white text-xs font-mono uppercase tracking-widest">CGPA: 8.88</p>
                   </div>
                 </div>
-                <p className="text-gray-300 ">Higher Secondary </p>
-                <p>Percentile : 95 </p>
-                <div className="flex justify-start space-x-3.5">
-                  <p className="text-gray-300 mb-3">LBSV Vadodara</p>
-                  <p className="font-medium">2021 - 2023</p>
+
+                {/* Degree 2 */}
+                <div className="group border-l border-white/10 pl-8 hover:border-white transition-colors duration-500">
+                  <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+                    <h4 className="text-2xl font-bold text-white tracking-tight">Higher Secondary</h4>
+                    <span className="text-zinc-500 font-mono text-xs mt-1">2021 — 2023</span>
+                  </div>
+                  <p className="text-zinc-400 text-lg">LBSV Vadodara</p>
+                  <p className="text-zinc-600 text-sm mt-3 font-medium uppercase tracking-tighter">Percentile: 95</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="bg-[#191a1f] rounded-xl p-6 max-w-md mx-auto border border-gray-600 hover:border-[#562e66] transition-all duration-300 m-3">
-            <div className="sm:flex items-start gap-4">
-              <div className="sm:flex-1">
-                <h3 className="text-white text-xl font-semibold mb-2">
-                  Work Experience
-                </h3>
+
+            {/* Work Experience Area */}
+            <div className="space-y-8">
+              <h3 className="text-zinc-400 text-[10px] font-bold uppercase tracking-[0.3em] border-b border-white/10 pb-3">
+                Professional Trajectory
+              </h3>
+              <div className="group flex justify-between items-center py-6 px-8 bg-white/[0.03] border border-white/5 rounded-2xl hover:bg-white/[0.05] transition-all">
                 <div>
-                  <p>Full Stack Developer</p>
-                  <p>0 years</p>
+                  <h4 className="text-xl font-bold text-white tracking-tight">Full Stack Developer</h4>
+                  <p className="text-zinc-500 text-sm font-mono mt-1 uppercase">Early Career Stage</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                  <span className="text-white text-[10px] font-bold tracking-[0.2em] uppercase">Active</span>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Right Side: Competencies */}
+          <div className="lg:border-l lg:border-white/5 lg:pl-24 space-y-16">
+            <div className="space-y-14">
+               <h3 className="text-zinc-600 text-[10px] font-bold uppercase tracking-[0.3em]">
+                 Core Competencies
+               </h3>
+               
+               <div className="space-y-16">
+                  {/* Skill 1 */}
+                  <div className="group space-y-4">
+                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Problem Solver</h4>
+                    <p className="text-zinc-400 text-lg leading-relaxed font-light max-w-md">
+                      Turning complex engineering challenges into elegant, 
+                      scalable systems with a focus on clean, modular architecture.
+                    </p>
+                  </div>
+
+                  {/* Skill 2 */}
+                  <div className="group space-y-4">
+                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Fast Learner</h4>
+                    <p className="text-zinc-400 text-lg leading-relaxed font-light max-w-md">
+                      Rapidly adapting to the shifting FinTech landscape and 
+                      evolving MERN stack paradigms with zero friction.
+                    </p>
+                  </div>
+
+                  {/* Skill 3 */}
+                  <div className="group space-y-4">
+                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Detail Oriented</h4>
+                    <p className="text-zinc-400 text-lg leading-relaxed font-light max-w-md">
+                      Ensuring absolute precision in data pipelines and high-level 
+                      quality in every line of code for mission-critical applications.
+                    </p>
+                  </div>
+               </div>
+            </div>
+          </div>
         </div>
 
-        <div className="sm:ml-2 space-y-3">
-          <div className="bg-[#191a1f] rounded-xl p-6 max-w-md mx-auto border border-gray-600 hover:border-[#562e66] transition-all duration-300">
-            <div className="sm:flex items-start gap-4">
-              <div className="sm:flex-1">
-                <h3 className="text-white text-xl font-semibold mb-2">
-                  Problem Solver
-                </h3>
-                <p>Turning complex challenges into elegant solutions</p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-[#191a1f] rounded-xl p-6 max-w-md mx-auto border border-gray-600 hover:border-[#562e66] transition-all duration-300">
-            <div className="sm:flex items-start gap-4">
-              <div className="sm:flex-1">
-                <h3 className="text-white text-xl font-semibold mb-2">
-                  Fast Learner
-                </h3>
-                <p>Adapting quickly to new technologies</p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-[#191a1f] rounded-xl p-6 max-w-md mx-auto border border-gray-600 hover:border-[#562e66] transition-all duration-300">
-            <div className="sm:flex items-start gap-4">
-              <div className="sm:flex-1">
-                <h3 className="text-white text-xl font-semibold mb-2">
-                  Detail Oriented{" "}
-                </h3>
-                <p>Ensuring quality in every line of code</p>{" "}
-              </div>
-            </div>
-          </div>
+        {/* Bottom Decorative Element */}
+        <div className="mt-32 pt-12 border-t border-white/5 flex justify-between items-center">
+          <span className="text-zinc-800 font-mono text-[10px] uppercase">Divy Gandhi // 2026</span>
+          <div className="h-[1px] flex-grow mx-8 bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
+          <span className="text-zinc-800 font-mono text-[10px] uppercase tracking-widest">Portfolio Edition v2</span>
         </div>
       </div>
-      <div className="sm:flex justify-center items-center max-sm:my-10 my-15 w-full sm:hidden">
-        <div className="w-full  text-left px-4">
-          <div className="text-white font-black text-5xl lg:text-6xl leading-none tracking-tight">
-            <div className="mb-2">CODE</div>
-            <div className="mb-2">Ship</div>
-            <div className="mb-1">REPEAT.</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="sm:flex justify-center items-center max-sm:my-10 my-15 w-full">
-        <div className="w-full  text-center px-4">
-          <div className="text-white font-black text-4xl lg:text-6xl leading-none tracking-tight max-sm:hidden">
-            <div className="mb-2">CODE Ship REPEAT.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
