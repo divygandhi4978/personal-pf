@@ -3,6 +3,13 @@ import React from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+const bgVariants = [
+  "bg-[#070707]", // deepest
+  "bg-[#0c0c0c]",
+  "bg-[#121212]",
+  "bg-[#181818]", // lightest
+];
+
 
   return (
     <footer className="py-24 bg-black border-t border-white/5 overflow-hidden">
@@ -31,14 +38,18 @@ const Footer = () => {
         {/* Social Terminal: Clean, Full-Width Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden">
           {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex flex-col items-center justify-center py-12 bg-black hover:bg-white/[0.02] transition-all duration-500"
-              aria-label={link.name}
-            >
+          <a
+  key={index}
+  href={link.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`group relative flex flex-col items-center justify-center py-12
+    ${bgVariants[index % bgVariants.length]}
+    hover:bg-white/[0.025]
+    transition-all duration-500`}
+  aria-label={link.name}
+>
+
               {/* Subtle Icon Treatment */}
               <div className="text-zinc-500 group-hover:text-[#562e66] transition-colors duration-300 transform group-hover:scale-110">
                 {link.icon}
