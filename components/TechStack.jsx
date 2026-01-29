@@ -5,7 +5,7 @@ const TechStack = () => {
     { category: "Frontend", items: ["React", "Next.js", "Tailwind", "Framer Motion"] },
     { category: "Backend", items: ["Node.js", "Express", "FastAPI", "Python", "DJango", "Java", "Flask", "Redis"] },
     { category: "Database", items: ["MongoDB", "MySQL"] },
-    { category: "ML & Data Science", items: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Scikit-learn"] },
+    { category: "ML & Data Science", items: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Scikit-learn","PowerBI"] },
     { category: "DevOps & Tools", items: ["Git", "Docker", "Kubernetes"] },
   ];
 
