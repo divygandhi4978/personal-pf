@@ -19,15 +19,22 @@ const projects = [
     preview: "https://ecell-lake.vercel.app/",
     source: "#",
   },
-  {
-    title: "VaproShine",
-    type: "Full-Stack // AutoCare SaaS",
-    description:
-      "A premium mobile steam cleaning platform featuring an automated booking engine, real-time service tracking, and an integrated admin terminal for fleet management.",
-    skills: ["MERN Stack", "Stripe", "Admin Dashboard"],
-    preview: "https://pro-steam.vercel.app/",
-    source: "#",
-  },
+ {
+  title: "VaproShine",
+  type: "Full-Stack // AutoCare SaaS + Data Analytics",
+  description:
+    "A premium mobile steam cleaning SaaS platform with an automated booking engine, real-time service tracking, and a dedicated data analytics dashboard built for the business owner to monitor revenue, customer behavior, service efficiency, and operational KPIs.",
+  skills: [
+    "NextJs",
+    "Power BI / Analytics Dashboard",
+    "Business Intelligence",
+    "Razorpay Payments",
+    "Admin & Owner Dashboard"
+  ],
+  preview: "https://pro-steam.vercel.app/",
+  source: "#",
+}
+
 ];
 
 const Projects = () => {
