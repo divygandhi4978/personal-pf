@@ -5,6 +5,7 @@ import newsletter from "../images/newsletter.png";
 import DGMonitor from "../images/water.png";
 import webcrawler from "../images/webcrawler.png";
 import vapro from "../images/vaproshine.gif";
+import vapro_powerbi from "../images/vapro_powerbi.gif";
 
 const list = [
   {
@@ -20,6 +21,19 @@ const list = [
       "Razorpay Payments",
       "Admin & Owner Dashboards",
       "Operational KPI Design",
+    ],
+  },
+  {
+    head: "VaproShine Admin Dashboard",
+    data: "A 5-page Power BI admin dashboard for a service-based business, designed for decision-making, not vanity metrics. Tracks revenue conversion, customer retention, coupon impact, service ratings, and automation health with business-driven KPIs and defensive DAX.",
+    preview: "https://github.com/divygandhi4978/PowerBI_Showcase",
+    source: "https://github.com/divygandhi4978/PowerBI_Showcase",
+    img: vapro_powerbi,
+    skills: [
+      "Power BI",
+      "Data Analytics",
+      "Business Intelligence",
+      "DAX & Dashboard Automation",
     ],
   },
   {
