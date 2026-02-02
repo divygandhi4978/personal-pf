@@ -19,32 +19,12 @@ const projects = [
     preview: "https://ecell-lake.vercel.app/",
     source: "#",
   },
- {
-  title: "VaproShine",
-  type: "Full-Stack // AutoCare SaaS + Data Analytics",
-  description:
-    "A premium mobile steam cleaning SaaS platform with an automated booking engine, real-time service tracking, and a dedicated data analytics dashboard built for the business owner to monitor revenue, customer behavior, service efficiency, and operational KPIs.",
-  skills: [
-    "NextJs",
-    "Power BI / Analytics Dashboard",
-    "Business Intelligence",
-    "Razorpay Payments",
-    "Admin & Owner Dashboard"
-  ],
-  preview: "https://pro-steam.vercel.app/",
-  source: "#",
-}
-
 ];
 
 const Projects = () => {
   return (
-    <section
-      id="Projects"
-      className="py-24 bg-black border-t border-white/5"
-    >
+    <section id="Projects" className="py-24 bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Header */}
         <div className="mb-20 space-y-4">
           <span className="text-[#562e66] font-mono text-xs font-bold uppercase tracking-[0.4em]">
@@ -121,7 +101,6 @@ const Projects = () => {
             </React.Fragment>
           ))}
         </div>
-
       </div>
     </section>
   );
