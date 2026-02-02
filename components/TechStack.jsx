@@ -2,17 +2,38 @@ import React from "react";
 
 const TechStack = () => {
   const stack = [
-    { category: "Frontend", items: ["React", "Next.js", "Tailwind", "Framer Motion"] },
-    { category: "Backend", items: ["Node.js", "Express", "FastAPI", "Python", "DJango", "Java", "Flask", "Redis"] },
-    { category: "Database", items: ["MongoDB", "MySQL"] },
-    { category: "ML & Data Science", items: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Scikit-learn","PowerBI"] },
-    { category: "DevOps & Tools", items: ["Git", "Docker", "Kubernetes"] },
+    {
+      category: "Frontend",
+      items: ["React", "Next.js", "Tailwind CSS"],
+    },
+    {
+      category: "Backend & APIs",
+      items: ["Node.js", "Express", "FastAPI", "Python"],
+    },
+    {
+      category: "Databases",
+      items: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+    },
+    {
+      category: "ML, Data & Analytics",
+      items: [
+        "NumPy",
+        "Pandas",
+        "Scikit-learn",
+        "Matplotlib",
+        "Streamlit",
+        "Power BI",
+      ],
+    },
+    {
+      category: "DevOps, Automation & Tooling",
+      items: ["Git", "Docker", "n8n"], //"Kubernetes",
+    },
   ];
 
   return (
     <section id="TechStack" className="py-24 bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
-        
         {/* Section Header: Bold & Expansive */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
           <div className="space-y-4">
@@ -24,15 +45,16 @@ const TechStack = () => {
             </h2>
           </div>
           <p className="text-zinc-500 text-sm md:text-base max-w-xs md:text-right font-light italic">
-            "Engineered for high-performance data processing and scalable financial architecture."
+            "Engineered for high-performance data processing and scalable
+            financial architecture."
           </p>
         </div>
 
         {/* Capabilities Grid: Clean & Structured */}
         <div className="grid gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden">
           {stack.map((group) => (
-            <div 
-              key={group.category} 
+            <div
+              key={group.category}
               className="grid md:grid-cols-[250px_1fr] bg-black group transition-colors duration-500 hover:bg-white/[0.01]"
             >
               {/* Category Label */}
@@ -69,8 +91,18 @@ const TechStack = () => {
               Explore deep-dive documentation
             </span>
             <div className="w-8 h-8 rounded-full bg-[#562e66]/10 flex items-center justify-center group-hover:bg-[#562e66] transition-all">
-              <svg className="w-4 h-4 text-[#562e66] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              <svg
+                className="w-4 h-4 text-[#562e66] group-hover:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
               </svg>
             </div>
           </a>
