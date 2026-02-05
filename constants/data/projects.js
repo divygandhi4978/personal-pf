@@ -78,7 +78,7 @@ const list = [
     ],
   },
   {
-    head: "Finsight – Equity Analyzer",
+    head: "Finsight – Equity Analysis Framework",
     data: "A sector-agnostic equity analysis framework built around universal financial and decision-making layers rather than industry-specific metrics.",
     preview: null,
     source: null,
