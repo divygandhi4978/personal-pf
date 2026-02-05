@@ -25,13 +25,14 @@ export default function Projects() {
         {visibleProjects.map((item, index) => (
           <SingleProject
             key={item.head}
-            index={index} 
+            index={index}
             skills={item.skills}
             head={item.head}
             data={item.data}
             preview={item.preview}
             source={item.source}
             img={item.img}
+            caseStudy={item.caseStudy}
           />
         ))}
       </div>
