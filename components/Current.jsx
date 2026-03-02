@@ -25,7 +25,7 @@ const projects = [
     "Lack of integrated parking and EV charging infrastructure"
   ],
 
-  preview: "#",
+  preview: "https://parkon-infrastructure-vision.vercel.app/",
   source: "#"
 },
   {
