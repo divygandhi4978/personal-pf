@@ -11,21 +11,21 @@ const projects = [
   //   source: "#",
   // },
   {
-    title: "Parkon",
-    type: "Smart Parking // Mobility Infrastructure // B2B + Consumer Platform",
+    title: "Current Focus",
+    type: "Computer Science // Finance & Investing // Business Strategy",
 
     description:
-      "Parkon is a smart parking platform that enables property owners to monetize unused parking while allowing drivers to discover, reserve, and access nearby available spaces in real time. The system optimizes allocation based on availability and integrates EV charging infrastructure to support future urban mobility.",
+      "Currently building a strong foundation at the intersection of technology, finance, and business. Focused on computer science fundamentals, financial markets, and strategic thinking while preparing for long-term goals of pursuing an MBA and CFA and working in fintech and investment-oriented roles.",
 
     skills: [
-      "Unused parking spaces generating no revenue",
-      "Drivers unable to find nearby available parking efficiently",
-      "No unified system for real-time parking visibility",
-      "Manual and inefficient parking allocation",
-      "Lack of integrated parking and EV charging infrastructure",
+      "Studying computer science fundamentals and backend systems",
+      "Learning financial markets, investing principles, and valuation",
+      "Reading annual reports and analyzing business models",
+      "Preparing for MBA-level business thinking and case analysis",
+      "Exploring fintech platforms, digital finance, and technology-driven financial infrastructure",
     ],
 
-    preview: "https://parkon-infrastructure-vision.vercel.app/",
+    preview: "#",
     source: "#",
   },
   {
