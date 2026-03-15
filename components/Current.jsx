@@ -11,23 +11,23 @@ const projects = [
   //   source: "#",
   // },
   {
-  title: "Parkon",
-  type: "Smart Parking // Mobility Infrastructure // B2B + Consumer Platform",
+    title: "Parkon",
+    type: "Smart Parking // Mobility Infrastructure // B2B + Consumer Platform",
 
-  description:
-    "Parkon is a smart parking platform that enables property owners to monetize unused parking while allowing drivers to discover, reserve, and access nearby available spaces in real time. The system optimizes allocation based on availability and integrates EV charging infrastructure to support future urban mobility.",
+    description:
+      "Parkon is a smart parking platform that enables property owners to monetize unused parking while allowing drivers to discover, reserve, and access nearby available spaces in real time. The system optimizes allocation based on availability and integrates EV charging infrastructure to support future urban mobility.",
 
-  skills: [
-    "Unused parking spaces generating no revenue",
-    "Drivers unable to find nearby available parking efficiently",
-    "No unified system for real-time parking visibility",
-    "Manual and inefficient parking allocation",
-    "Lack of integrated parking and EV charging infrastructure"
-  ],
+    skills: [
+      "Unused parking spaces generating no revenue",
+      "Drivers unable to find nearby available parking efficiently",
+      "No unified system for real-time parking visibility",
+      "Manual and inefficient parking allocation",
+      "Lack of integrated parking and EV charging infrastructure",
+    ],
 
-  preview: "https://parkon-infrastructure-vision.vercel.app/",
-  source: "#"
-},
+    preview: "https://parkon-infrastructure-vision.vercel.app/",
+    source: "#",
+  },
   {
     title: "E-Cell GECG Portal",
     type: "Full-Stack // Events",
