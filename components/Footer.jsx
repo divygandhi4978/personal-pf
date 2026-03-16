@@ -1,5 +1,6 @@
 import socialLinks from "@/constants/data/socialLinks";
 import React from "react";
+import { Rss } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -69,15 +70,28 @@ const bgVariants = [
         {/* Legal & Versioning */}
         <div className="mt-16 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/5 pt-10 font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-600">
          
-          <div className="flex items-center gap-6">
-            <span>Last Indexed: 26 Jan 2026</span>
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#562e66] animate-pulse" />
-              <span className="text-white">v2.0.0</span>
-            </div>
-          </div>
-        </div>
+  <div className="flex items-center gap-6">
+    <span>Last Indexed: 26 Jan 2026</span>
 
+    <div className="flex items-center gap-2">
+      <div className="w-1.5 h-1.5 rounded-full bg-[#562e66] animate-pulse" />
+      <span className="text-white">v2.0.0</span>
+    </div>
+  </div>
+
+  {/* RSS Feed Icon */}
+  <a
+    href="/atom.xml"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-[#562e66] transition-colors"
+    aria-label="RSS Feed"
+  >
+    <Rss size={14} />
+    <span>Feed</span>
+  </a>
+
+</div>
       </div>
     </footer>
   );
