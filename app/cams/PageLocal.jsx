@@ -148,18 +148,19 @@ export default function CamsInstitutionalResearch() {
                     </p>
                     <div className="max-w-3xl mx-auto my-10 border border-white/10 rounded-sm bg-black overflow-hidden shadow-2xl">
                         <img
-                            src="/cams/img3.jpg"
+                            src="/cams/img4.png"
                             alt="CAMS Ecosystem Visualization"
                             className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                         />
                     </div>
                     <div className="max-w-3xl mx-auto my-10 border border-white/10 rounded-sm bg-black overflow-hidden shadow-2xl">
                         <img
-                            src="/cams/img4.png"
+                            src="/cams/img3.jpg"
                             alt="CAMS Ecosystem Visualization"
                             className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                         />
                     </div>
+
                     <div className="grid md:grid-cols-2 gap-12 pt-8">
                         <div className="space-y-4">
                             <h4 className="text-white font-bold uppercase tracking-widest text-xs opacity-50">The Obvious Narrative</h4>
