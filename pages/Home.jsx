@@ -8,8 +8,9 @@ import Conclusion from "@/components/Conclusion";
 import ContactForm from "@/components/ContactForm";
 import Scroller from "@/components/Scroller";
 import Current from "@/components/Current";
+import Cases from "@/components/Analysis";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
+
 // page.js
 export default function Home() {
   const sections = [
@@ -18,12 +19,12 @@ export default function Home() {
     { id: "tech", component: <TechStack />, z: "z-[30]" },
     { id: "activity", component: <Calenders />, z: "z-[40]" },
     { id: "current", component: <Current />, z: "z-[50]" },
+    { id: "Cases", component: <Cases/>, z: "z-[50]" },
     { id: "projects", component: <Projects />, z: "z-[60]" },
     { id: "experience", component: <Experience />, z: "z-[70]" },
     { id: "scroller", component: <Scroller />, z: "z-[80]", isStatic: true },
     { id: "conclusion", component: <Conclusion />, z: "z-[90]" },
     { id: "contact", component: <ContactForm />, z: "z-[100]" },
-    // { id: "footer", component: <Footer />, z: "z-[110]", isFooter: true },
   ];
   
   return (
