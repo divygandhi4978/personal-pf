@@ -9,7 +9,7 @@ export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
 
   // ✅ robust check (handles /cams, /cams/, /cams/anything)
-  const isMinimal = pathname.startsWith("/cams");
+  const isMinimal = pathname.startsWith("/cams") || pathname.startsWith("/cases");
 
   if (isMinimal) {
     // 🚫 completely bypass layout
