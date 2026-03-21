@@ -5,7 +5,7 @@ import { LiquidDropLoader } from "react-loaderkit";
 const PortfolioHero = () => {
   return (
     <section
-      className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-center py-12 md:py-24 lg:py-32 overflow-hidden bg-black selection:bg-[#562e66] selection:text-white"
+      className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-center py-16 md:py-24 lg:py-32 overflow-hidden bg-black selection:bg-[#562e66] selection:text-white"
       id="Home"
     >
       {/* Background Aura */}
@@ -15,65 +15,64 @@ const PortfolioHero = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 lg:gap-8">
 
           {/* Left Content */}
-          <div className="space-y-8 md:space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 max-w-4xl">
+          <div className="space-y-10 md:space-y-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 max-w-4xl w-full">
 
-            {/* Status Badge: Now indicates the journey */}
-            <div className="inline-flex items-center space-x-3 bg-white/[0.03] border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm mx-auto lg:mx-0">
-              <LiquidDropLoader size={12} color="#562e66" speed={1.5} />
-              <span className="text-zinc-500 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
-                Learning & Building // Vadodara
-              </span>
+            {/* Status Badge */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="inline-flex items-center space-x-3 bg-white/[0.03] border border-white/10 px-5 py-2.5 rounded-full backdrop-blur-sm">
+                <LiquidDropLoader size={14} color="#562e66" speed={1.5} />
+                <span className="text-zinc-500 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
+                  Learning & Building // Vadodara
+                </span>
+              </div>
             </div>
 
-            {/* Name & Human-Centric Role */}
-            <div className="space-y-4 text-center lg:text-left">
-              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[0.9] lg:leading-[0.85]">
+            {/* Name & Role: Increased mobile font size to 6xl and leading to 1.1 */}
+            <div className="space-y-6 text-center lg:text-left">
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white导致 leading-[1.1] lg:leading-[0.85]">
                 Divy Gandhi
               </h1>
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-light text-[#562e66] tracking-tight italic">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-[#562e66] tracking-tight italic px-2 lg:px-0">
                 Bridging the gap between Finance and Code.
               </h2>
             </div>
 
-            {/* Value Proposition - Focused on Growth and Curiosity */}
-            <p className="text-zinc-400 text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed font-light mx-auto lg:mx-0 text-center lg:text-left px-4 lg:px-0">
-              I’m currently exploring how <span className="text-white font-medium">technology reshapes finance</span>. 
-              While I study the fundamentals of <span className="text-white font-medium">Business Strategy</span>, 
-              I’m getting my hands dirty building with the MERN stack and visualizing data in Power BI. 
-              I don't just want to see the numbers—I want to <span className="text-white font-medium">build the systems</span> that generate them.
+            {/* Value Proposition: Bumped base text to text-lg for mobile */}
+            <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed font-light mx-auto lg:mx-0 text-center lg:text-left px-2 sm:px-6 lg:px-0">
+              I’m currently exploring how <span className="text-white font-medium">technology reshapes finance</span>.
+              While I study <span className="text-white font-medium">Business Strategy</span>,
+              I’m building with the MERN stack and <span className="text-white font-medium">Power BI</span> to
+              turn raw numbers into systems that actually make sense.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4">
-              {/* Primary: Journey/Learning Progress */}
+            {/* CTAs: Larger padding for easier tapping on mobile */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 sm:gap-6 pt-6">
+
               <Link href="/cases" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-white text-black px-10 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#562e66] hover:text-white transition-all duration-300 active:scale-95 cursor-pointer shadow-xl shadow-white/5">
-                  See My Journey
-                </button>
+                <button className="w-full sm:w-auto bg-white text-black px-10 py-5 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#562e66] hover:text-white transition-all duration-300 active:scale-95 cursor-pointer shadow-xl shadow-white/5">
+                  Case Studies                </button>
               </Link>
 
-              {/* Secondary: LinkedIn */}
               <a
                 href="https://in.linkedin.com/in/divy-gandhi-9713b6284"
                 target="_blank"
                 rel="noreferrer"
                 className="w-full sm:w-auto"
               >
-                <button className="w-full sm:w-auto border border-white/20 bg-white/5 text-white px-10 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300 active:scale-95 cursor-pointer">
+                <button className="w-full sm:w-auto border border-white/20 bg-white/5 text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300 active:scale-95 cursor-pointer">
                   Say Hello
                 </button>
               </a>
 
-              {/* Tertiary: Resume */}
               <a
                 href="/resume-divy.pdf"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center gap-3 text-zinc-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-[0.2em] cursor-pointer"
+                className="group flex items-center justify-center gap-4 text-zinc-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-[0.2em] cursor-pointer py-4 sm:py-0"
               >
                 <span>My Resume</span>
                 <svg
-                  className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
