@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { LiquidDropLoader } from "react-loaderkit";
 
@@ -16,52 +17,61 @@ const PortfolioHero = () => {
           {/* Left Content */}
           <div className="space-y-8 md:space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 max-w-4xl">
 
-            {/* Status Badge */}
+            {/* Status Badge: Now indicates the journey */}
             <div className="inline-flex items-center space-x-3 bg-white/[0.03] border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm mx-auto lg:mx-0">
               <LiquidDropLoader size={12} color="#562e66" speed={1.5} />
               <span className="text-zinc-500 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
-                Currently in Vadodara // Open for global roles
+                Learning & Building // Vadodara
               </span>
             </div>
 
-            {/* Name & Role */}
+            {/* Name & Human-Centric Role */}
             <div className="space-y-4 text-center lg:text-left">
               <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white leading-[0.9] lg:leading-[0.85]">
                 Divy Gandhi
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-4xl font-light text-[#562e66] tracking-tight italic">
-                Full-Stack Developer · Data Analyst · Finance Aspirant
+                Bridging the gap between Finance and Code.
               </h2>
             </div>
 
-            {/* Value Proposition */}
+            {/* Value Proposition - Focused on Growth and Curiosity */}
             <p className="text-zinc-400 text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed font-light mx-auto lg:mx-0 text-center lg:text-left px-4 lg:px-0">
-              I design <span className="text-white font-medium">scalable web applications</span> and transform raw data into
-              <span className="text-white font-medium"> decision-ready insights</span>.  
-              Experienced in <span className="text-white font-medium">Power BI dashboards</span>, financial analytics,
-              and <span className="text-white font-medium">end-to-end data pipelines</span> using the MERN stack.
+              I’m currently exploring how <span className="text-white font-medium">technology reshapes finance</span>. 
+              While I study the fundamentals of <span className="text-white font-medium">Business Strategy</span>, 
+              I’m getting my hands dirty building with the MERN stack and visualizing data in Power BI. 
+              I don't just want to see the numbers—I want to <span className="text-white font-medium">build the systems</span> that generate them.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 pt-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4">
+              {/* Primary: Journey/Learning Progress */}
+              <Link href="/cases" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-white text-black px-10 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#562e66] hover:text-white transition-all duration-300 active:scale-95 cursor-pointer shadow-xl shadow-white/5">
+                  See My Journey
+                </button>
+              </Link>
+
+              {/* Secondary: LinkedIn */}
               <a
                 href="https://in.linkedin.com/in/divy-gandhi-9713b6284"
                 target="_blank"
                 rel="noreferrer"
                 className="w-full sm:w-auto"
               >
-                <button className="w-full sm:w-auto bg-white text-black px-10 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#562e66] hover:text-white transition-all duration-300 active:scale-95 cursor-pointer shadow-xl shadow-white/5">
-                  Contact Me
+                <button className="w-full sm:w-auto border border-white/20 bg-white/5 text-white px-10 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300 active:scale-95 cursor-pointer">
+                  Say Hello
                 </button>
               </a>
 
+              {/* Tertiary: Resume */}
               <a
                 href="/resume-divy.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center gap-3 text-zinc-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-[0.2em] cursor-pointer"
               >
-                <span>View Resume</span>
+                <span>My Resume</span>
                 <svg
                   className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                   fill="none"
