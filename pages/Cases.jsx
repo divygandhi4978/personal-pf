@@ -28,9 +28,9 @@ export default function CaseStudiesPage() {
             <Link
               key={study.slug}
               href={study.link}
-              className="group block border-b border-white/[0.04] py-14 md:py-24 transition-colors duration-700 hover:bg-white/[0.01]"
+              className="group block border-b border-white/[0.04] py-14 md:py-24 transition-colors duration-700 hover:bg-white/[0.03] rounded-2xl "
             >
-              <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 md:gap-16 items-start">
+              <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 md:gap-16 items-start ]">
                 
                 {/* Index & Title (Cols 1-7) */}
                 <div className="lg:col-span-7 flex gap-6 md:gap-14">
