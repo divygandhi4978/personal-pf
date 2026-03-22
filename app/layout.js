@@ -1,5 +1,6 @@
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata = {
   title: "Divy Gandhi — Software Engineer | Finance Aspirant",
@@ -10,12 +11,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
       <head>
-                <link rel="icon" href="/favicon.png" sizes="any" />
+        <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
+
       <body className="bg-black text-white antialiased font-['Inter',sans-serif]">
-        <LayoutWrapper>{children}</LayoutWrapper>
+
+        <CustomCursor />
+
+        <LayoutWrapper>
+          {children}
+        </LayoutWrapper>
+
       </body>
+
     </html>
   );
 }
