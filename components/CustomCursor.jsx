@@ -9,8 +9,8 @@ export default function LargeCursor() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // Adjusted for a "snappier" feel so it stays stuck to the mouse pointer
-  const springConfig = { damping: 20, stiffness: 250, mass: 0.5 };
+  // Smooth but fast tracking
+  const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
   const cursorX = useSpring(mouseX, springConfig);
   const cursorY = useSpring(mouseY, springConfig);
 
@@ -22,13 +22,7 @@ export default function LargeCursor() {
 
     const handleMouseOver = (e) => {
       const target = e.target;
-      if (
-        target.tagName === "A" || 
-        target.tagName === "BUTTON" || 
-        target.closest("button") || 
-        target.closest("a") ||
-        target.getAttribute('role') === 'button'
-      ) {
+      if (target.closest("button") || target.closest("a")) {
         setIsHovering(true);
       }
     };
@@ -48,7 +42,7 @@ export default function LargeCursor() {
 
   return (
     <>
-      {/* The Outer Ring: High Visibility Purple Aura */}
+      {/* 1. Outer Sharp Ring */}
       <motion.div
         className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center"
         style={{
@@ -60,19 +54,18 @@ export default function LargeCursor() {
       >
         <motion.div
           animate={{
-            width: isHovering ? 80 : 40,
-            height: isHovering ? 80 : 40,
-            // Keep background very transparent to see text clearly
-            backgroundColor: isHovering ? "rgba(86, 46, 102, 0.1)" : "transparent",
-            // Thicker, brighter border for visibility
-            borderColor: isHovering ? "rgba(168, 85, 247, 0.8)" : "rgba(86, 46, 102, 0.6)",
-            borderWidth: isHovering ? "2px" : "1.5px",
+            width: isHovering ? 90 : 50,
+            height: isHovering ? 90 : 50,
+            borderColor: isHovering ? "#a855f7" : "#562e66",
+            borderWidth: isHovering ? "2px" : "1px",
+            opacity: isHovering ? 1 : 0.8,
           }}
-          className="rounded-full border-solid shadow-[0_0_20px_rgba(86,46,102,0.4)]"
+          // filter: drop-shadow makes the ring itself glow
+          className="rounded-full border-solid filter drop-shadow-[0_0_8px_rgba(86,46,102,0.6)]"
         />
       </motion.div>
 
-      {/* The Center Point: Always visible white dot */}
+      {/* 2. Glowing Core Dot */}
       <motion.div
         className="fixed top-0 left-0 z-[10000] pointer-events-none"
         style={{
@@ -84,12 +77,18 @@ export default function LargeCursor() {
       >
         <motion.div 
           animate={{ 
-            scale: isHovering ? 1.5 : 1,
-            backgroundColor: isHovering ? "#fff" : "#562e66" 
+            scale: isHovering ? 2.5 : 1.2,
           }}
-          // Added a small white glow to the dot so it pops against dark sections
-          className="w-1.5 h-1.5 rounded-full shadow-[0_0_10px_white]" 
-        />
+          className="w-3 h-3 rounded-full relative flex items-center justify-center"
+          style={{
+            // Radial gradient creates the soft light falloff seen in your image
+            background: "radial-gradient(circle, #a855f7 0%, #562e66 100%)",
+            boxShadow: "0 0 15px 4px rgba(86, 46, 102, 0.6), 0 0 30px 2px rgba(255, 255, 255, 0.1)"
+          }}
+        >
+          {/* Optional: Inner white highlight for extra "pop" */}
+          <div className="w-1 h-1 bg-white/40 rounded-full blur-[1px]" />
+        </motion.div>
       </motion.div>
     </>
   );
