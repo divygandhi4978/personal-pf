@@ -57,6 +57,16 @@ const CatPrimaryMission = () => {
 
     };
 
+    const data = [
+        { percentile: "99.9%ile", varc: 53, lrdi: 38, qa: 37, overall: 111 },
+        { percentile: "99.5%ile", varc: 48, lrdi: 33, qa: 31, overall: 93 },
+        { percentile: "99%ile", varc: 44, lrdi: 30, qa: 27, overall: 84 },
+        { percentile: "95%ile", varc: 33, lrdi: 22, qa: 18, overall: 62 },
+        { percentile: "90%ile", varc: 26, lrdi: 17, qa: 15, overall: 52 },
+        { percentile: "85%ile", varc: 22, lrdi: 14, qa: 14, overall: 44 },
+        { percentile: "80%ile", varc: 19, lrdi: 12, qa: 10, overall: 38 },
+    ];
+
     const today = new Date();
 
     const dayNumber = today.getDay();
@@ -236,6 +246,113 @@ const CatPrimaryMission = () => {
             </section>
 
             <MotivationVideoPopup />
+
+
+            <section className="relative bg-black border-t border-white/10 py-24 overflow-hidden">
+
+                {/* Background Aura */}
+
+                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[150%] max-w-[900px] h-[350px] bg-[#83479a]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+
+                <div className="max-w-6xl mx-auto px-6 space-y-14">
+
+                    {/* Header */}
+
+                    <div className="text-center space-y-4">
+
+                        <span className="text-zinc-500 font-mono text-xs uppercase tracking-[0.4em]">
+                            Performance Target Map
+                        </span>
+
+                        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
+
+                            Percentile vs Score Targets
+
+                        </h2>
+
+                        <p className="text-[#83479a] font-semibold uppercase tracking-wide">
+                            Know The Numbers. Not Just The Goal.
+                        </p>
+
+                    </div>
+
+                    {/* Table */}
+
+                    <div className="overflow-x-auto border border-white/10 rounded-2xl">
+
+                        <table className="w-full text-left border-collapse">
+
+                            {/* Header */}
+
+                            <thead className="bg-[#83479a]/20">
+
+                                <tr className="text-white text-lg">
+
+                                    <th className="p-5">Percentile</th>
+                                    <th className="p-5">VARC</th>
+                                    <th className="p-5">LRDI</th>
+                                    <th className="p-5">QA</th>
+                                    <th className="p-5">Overall</th>
+
+                                </tr>
+
+                            </thead>
+
+                            {/* Rows */}
+
+                            <tbody>
+
+                                {data.map((row, index) => {
+
+                                    const highlight = row.percentile === "95%ile";
+
+                                    return (
+
+                                        <tr
+                                            key={index}
+                                            className={`border-t border-white/10 text-lg
+                    ${highlight
+                                                    ? "bg-[#83479a]/15 text-white font-semibold"
+                                                    : "text-zinc-300"
+                                                }`}
+                                        >
+
+                                            <td className="p-5">
+                                                {row.percentile}
+                                            </td>
+
+                                            <td className="p-5">
+                                                {row.varc}
+                                            </td>
+
+                                            <td className="p-5">
+                                                {row.lrdi}
+                                            </td>
+
+                                            <td className="p-5">
+                                                {row.qa}
+                                            </td>
+
+                                            <td className="p-5 font-bold">
+                                                {row.overall}
+                                            </td>
+
+                                        </tr>
+
+                                    );
+
+                                })}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
 
             <section className="relative bg-black border-t border-white/10 py-24 overflow-hidden">
 
