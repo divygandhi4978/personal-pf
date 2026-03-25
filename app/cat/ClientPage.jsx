@@ -1,5 +1,6 @@
 "use client";
 
+import MathMemoryNotes from "@/components/cat/Tables_Square";
 import MotivationVideoPopup from "@/components/cat/video_modal";
 import React, { useEffect, useState } from "react";
 
@@ -1123,6 +1124,8 @@ const CatPrimaryMission = () => {
                 )}
 
             </section>
+
+            <MathMemoryNotes/>
         </>
     );
 
