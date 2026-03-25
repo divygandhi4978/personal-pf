@@ -9,15 +9,17 @@ export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
 
   // ✅ robust check (handles /cams, /cams/, /cams/anything)
-  const isMinimal = pathname.startsWith("/cams") || pathname.startsWith("/cases");
-
+  const isMinimal = pathname.startsWith("/cams") || pathname.startsWith("/cases") || pathname.startsWith("/cat");
+  
   if (isMinimal) {
     // 🚫 completely bypass layout
     return <main className="w-full">{children}</main>;
   }
+  
 
   return (
     <>
+
       <Nav />
 
       <main className="w-full">
