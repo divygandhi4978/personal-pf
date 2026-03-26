@@ -162,6 +162,10 @@ const CatPrimaryMission = () => {
 
                         </p>
 
+                        <h2 className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tighter text-white leading-none">
+
+                            Don't just solve, Solve with proper Approach.!
+                        </h2>
                     </div>
 
                     {/* PRIMARY RULES — BULLET FORMAT */}
