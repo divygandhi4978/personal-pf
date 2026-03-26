@@ -1,9 +1,8 @@
 "use client";
 
-import MathMemoryNotes from "@/components/cat/Tables_Square";
 import MotivationVideoPopup from "@/components/cat/video_modal";
 import React, { useEffect, useState } from "react";
-
+import Link from "next/link";
 const CatPrimaryMission = () => {
 
 
@@ -169,6 +168,30 @@ const CatPrimaryMission = () => {
 
                     <div className="grid md:grid-cols-2 gap-10 pt-10">
 
+                        <Link href="/cat/math">
+
+                            <button
+                                className="
+      px-5 py-3
+      text-sm
+      font-black
+      uppercase
+      tracking-widest
+      border
+      border-[#562e66]
+      bg-[#562e66]/20
+      text-[#9b51b3]
+      hover:bg-[#562e66]
+      hover:text-white
+      transition-all
+      mb-10
+      rounded-sm
+    "
+                            >
+                                Math Remember Page
+                            </button>
+
+                        </Link>
                         {/* LEFT CARD */}
 
                         <div className="border border-[#83479a]/30 bg-[#83479a]/5 rounded-2xl p-8">
@@ -241,8 +264,9 @@ const CatPrimaryMission = () => {
                         </div>
 
                     </div>
-
                 </div>
+
+
 
             </section>
 
@@ -1125,7 +1149,6 @@ const CatPrimaryMission = () => {
 
             </section>
 
-            <MathMemoryNotes/>
         </>
     );
 

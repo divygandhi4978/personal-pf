@@ -9,26 +9,19 @@ const TableBlock = ({ number }) => {
   return (
     <div className="border border-white/10 rounded-sm p-3 bg-white/[0.01]">
 
-      {/* Table Title */}
-
       <h3 className="text-[#9b51b3] text-sm font-black tracking-widest text-center mb-2">
         TABLE {number}
       </h3>
-
-      {/* Table Content */}
 
       <div className="space-y-[2px] text-[15px] md:text-sm text-white/90 font-medium">
 
         {Array.from({ length: 10 }, (_, i) => (
 
           <div key={i}>
-
             {number} × {i + 1} ={" "}
-
             <span className="font-bold text-white">
               {number * (i + 1)}
             </span>
-
           </div>
 
         ))}
@@ -41,15 +34,13 @@ const TableBlock = ({ number }) => {
 
 
 /* =========================
-   ROW TABLE (Squares etc)
+   ROW TABLE
 ========================= */
 
 const RowTable = ({ headers, rows }) => {
   return (
 
     <div className="border border-white/10 rounded-sm overflow-hidden">
-
-      {/* Header */}
 
       <div className="grid grid-cols-2 bg-[#562e66]/20 text-[#9b51b3] text-sm font-black uppercase tracking-widest">
 
@@ -65,8 +56,6 @@ const RowTable = ({ headers, rows }) => {
         ))}
 
       </div>
-
-      {/* Rows */}
 
       {rows.map((row, i) => (
 
@@ -131,6 +120,19 @@ export default function MathMemoryToolkit() {
     5 ** (i + 1),
   ]);
 
+  /* NEW — FRACTIONS */
+
+  const fractions = Array.from({ length: 25 }, (_, i) => {
+
+    const denominator = i + 1;
+
+    return [
+      `1/${denominator}`,
+      (100 / denominator).toFixed(2) + "%",
+    ];
+
+  });
+
 
   /* =========================
      TABLE RENDER
@@ -189,7 +191,7 @@ export default function MathMemoryToolkit() {
         </h1>
 
         <p className="text-[#9b51b3] text-xs uppercase tracking-[0.4em] font-bold">
-          Tables • Squares • Powers
+          Tables • Squares • Powers • Fractions
         </p>
 
       </div>
@@ -201,68 +203,53 @@ export default function MathMemoryToolkit() {
 
         <button
           onClick={() => setActive("tables")}
-          className={`${btn} ${
-            active === "tables"
-              ? activeBtn
-              : inactiveBtn
-          }`}
+          className={`${btn} ${active === "tables" ? activeBtn : inactiveBtn}`}
         >
           Tables
         </button>
 
         <button
           onClick={() => setActive("squares")}
-          className={`${btn} ${
-            active === "squares"
-              ? activeBtn
-              : inactiveBtn
-          }`}
+          className={`${btn} ${active === "squares" ? activeBtn : inactiveBtn}`}
         >
           Squares
         </button>
 
         <button
           onClick={() => setActive("cubes")}
-          className={`${btn} ${
-            active === "cubes"
-              ? activeBtn
-              : inactiveBtn
-          }`}
+          className={`${btn} ${active === "cubes" ? activeBtn : inactiveBtn}`}
         >
           Cubes
         </button>
 
         <button
           onClick={() => setActive("p2")}
-          className={`${btn} ${
-            active === "p2"
-              ? activeBtn
-              : inactiveBtn
-          }`}
+          className={`${btn} ${active === "p2" ? activeBtn : inactiveBtn}`}
         >
           Power 2
         </button>
 
         <button
           onClick={() => setActive("p3")}
-          className={`${btn} ${
-            active === "p3"
-              ? activeBtn
-              : inactiveBtn
-          }`}
+          className={`${btn} ${active === "p3" ? activeBtn : inactiveBtn}`}
         >
           Power 3
         </button>
 
         <button
           onClick={() => setActive("p5")}
-          className={`${btn} ${
-            active === "p5"
-              ? activeBtn
-              : inactiveBtn
-          }`}
+          className={`${btn} ${active === "p5" ? activeBtn : inactiveBtn}`}
         >
           Power 5
+        </button>
+
+        {/* NEW BUTTON */}
+
+        <button
+          onClick={() => setActive("fractions")}
+          className={`${btn} ${active === "fractions" ? activeBtn : inactiveBtn}`}
+        >
+          Fractions
         </button>
 
       </div>
@@ -275,48 +262,47 @@ export default function MathMemoryToolkit() {
         {active === "tables" && renderTables()}
 
         {active === "squares" && (
-
           <RowTable
             headers={["Number", "Square"]}
             rows={squares}
           />
-
         )}
 
         {active === "cubes" && (
-
           <RowTable
             headers={["Number", "Cube"]}
             rows={cubes}
           />
-
         )}
 
         {active === "p2" && (
-
           <RowTable
             headers={["Power", "Value"]}
             rows={power2}
           />
-
         )}
 
         {active === "p3" && (
-
           <RowTable
             headers={["Power", "Value"]}
             rows={power3}
           />
-
         )}
 
         {active === "p5" && (
-
           <RowTable
             headers={["Power", "Value"]}
             rows={power5}
           />
+        )}
 
+        {/* NEW SECTION */}
+
+        {active === "fractions" && (
+          <RowTable
+            headers={["Fraction", "Percentage"]}
+            rows={fractions}
+          />
         )}
 
       </div>
