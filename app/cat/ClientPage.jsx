@@ -3,6 +3,9 @@
 import MotivationVideoPopup from "@/components/cat/video_modal";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+
+import DailyQuoteSection from "@/components/cat/Quotes"
+
 const CatPrimaryMission = () => {
 
 
@@ -48,14 +51,6 @@ const CatPrimaryMission = () => {
 
     const [daysRemaining, setDaysRemaining] = useState(0);
     const [weeksRemaining, setWeeksRemaining] = useState(0);
-
-    const getTodayDay = () => {
-
-        const today = new Date();
-
-        return today.getDay();
-
-    };
 
     const data = [
         { percentile: "99.9%ile", varc: 53, lrdi: 38, qa: 37, overall: 111 },
@@ -162,15 +157,17 @@ const CatPrimaryMission = () => {
 
                         </p>
 
-                        <h2 className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tighter text-white leading-none">
+                        <p className="text-[#dac2e3] text-xl md:text-2xl font-light italic">
 
                             Don't just solve, Solve with proper Approach.!
-                        </h2>
+                        </p>
+
+                        <DailyQuoteSection />
                     </div>
 
                     {/* PRIMARY RULES — BULLET FORMAT */}
 
-                    <div className="grid md:grid-cols-2 gap-10 pt-10">
+                    <div className="grid md:grid-cols-2 gap-5 ">
 
                         <Link href="/cat/math">
 
@@ -188,8 +185,8 @@ const CatPrimaryMission = () => {
       hover:bg-[#562e66]
       hover:text-white
       transition-all
-      mb-10
       rounded-sm
+      mb-10
     "
                             >
                                 Math Remember Page
