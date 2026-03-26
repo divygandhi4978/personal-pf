@@ -58,8 +58,6 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Spacer */}
                             <div className="h-[50vh]" />
                         </React.Fragment>
                     ))}
