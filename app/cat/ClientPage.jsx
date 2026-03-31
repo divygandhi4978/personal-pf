@@ -100,14 +100,27 @@ const CatPrimaryMission = () => {
 
     const getDaysAndWeeksRemaining = () => {
 
-        const now = new Date();
+        // Clone dates
+        const today = new Date();
+        const target = new Date(TARGET_DATE);
 
-        const diffTime = TARGET_DATE - now;
+        // Remove time completely (critical)
+        today.setHours(0, 0, 0, 0);
+        target.setHours(0, 0, 0, 0);
 
-        const days = Math.floor(
+        // Raw difference
+        const diffTime = target - today;
+
+        // Convert to days
+        let days = Math.ceil(
             diffTime / (1000 * 60 * 60 * 24)
         );
 
+
+        // Safety guard
+        if (days < 0) days = 0;
+
+        // Weeks calculation
         const weeks = Math.floor(days / 7);
 
         return { days, weeks };
@@ -136,29 +149,8 @@ const CatPrimaryMission = () => {
 
     // ===== LIVE TIME =====
 
-    const getTimeRemaining = () => {
 
-        const now = new Date();
 
-        const diff = TARGET_DATE - now;
-
-        const seconds =
-            Math.floor((diff / 1000) % 60);
-
-        const minutes =
-            Math.floor((diff / 1000 / 60) % 60);
-
-        const hours =
-            Math.floor((diff / 1000 / 60 / 60) % 24);
-
-        return {
-            hours,
-            minutes,
-            seconds
-        };
-
-    };// 🎯 Target Date
-   
     useEffect(() => {
 
         const updateCountdown = () => {
@@ -169,13 +161,11 @@ const CatPrimaryMission = () => {
             const months =
                 getMonthsRemaining();
 
-            const time =
-                getTimeRemaining();
+
 
             setDaysRemaining(days);
             setWeeksRemaining(weeks);
             setMonthsRemaining(months);
-            setTimeRemaining(time);
 
         };
 
