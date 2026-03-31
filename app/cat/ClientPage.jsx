@@ -1068,6 +1068,13 @@ const CatPrimaryMission = () => {
                         🎯 Career Roadmap
                     </button>
 
+                    <Link
+                        href="/cat/remember"
+                        className="border border-[#83479a]/40 bg-[#83479a]/10 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-[#83479a]/20 transition"
+                    >
+                         SIMCAT Playbook
+                    </Link>
+
                 </div>
 
                 {/* ========================= */}
