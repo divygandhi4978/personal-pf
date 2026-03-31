@@ -48,10 +48,15 @@ const CatPrimaryMission = () => {
         }
 
     ];
-
     const [daysRemaining, setDaysRemaining] = useState(0);
     const [weeksRemaining, setWeeksRemaining] = useState(0);
+    const [monthsRemaining, setMonthsRemaining] = useState(0);
 
+    const [timeRemaining, setTimeRemaining] = useState({
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
     const data = [
         { percentile: "99.9%ile", varc: 53, lrdi: 38, qa: 37, overall: 111 },
         { percentile: "99.5%ile", varc: 48, lrdi: 33, qa: 31, overall: 93 },
@@ -86,36 +91,104 @@ const CatPrimaryMission = () => {
 
     const todayName = dayNames[dayNumber];
 
+    // 🎯 Target Date
+    const TARGET_DATE =
+        new Date("2026-11-29T00:00:00");
+
+
+    // ===== DAYS + WEEKS =====
+
+    const getDaysAndWeeksRemaining = () => {
+
+        const now = new Date();
+
+        const diffTime = TARGET_DATE - now;
+
+        const days = Math.floor(
+            diffTime / (1000 * 60 * 60 * 24)
+        );
+
+        const weeks = Math.floor(days / 7);
+
+        return { days, weeks };
+
+    };
+
+
+    // ===== MONTHS =====
+
+    const getMonthsRemaining = () => {
+
+        const now = new Date();
+
+        let months =
+            (TARGET_DATE.getFullYear() - now.getFullYear()) * 12 +
+            (TARGET_DATE.getMonth() - now.getMonth());
+
+        if (TARGET_DATE.getDate() < now.getDate()) {
+            months--;
+        }
+
+        return months;
+
+    };
+
+
+    // ===== LIVE TIME =====
+
+    const getTimeRemaining = () => {
+
+        const now = new Date();
+
+        const diff = TARGET_DATE - now;
+
+        const seconds =
+            Math.floor((diff / 1000) % 60);
+
+        const minutes =
+            Math.floor((diff / 1000 / 60) % 60);
+
+        const hours =
+            Math.floor((diff / 1000 / 60 / 60) % 24);
+
+        return {
+            hours,
+            minutes,
+            seconds
+        };
+
+    };// 🎯 Target Date
+   
     useEffect(() => {
 
-        const calculateDays = () => {
+        const updateCountdown = () => {
 
-            // 🎯 Target CAT Date
-            const targetDate = new Date("2026-11-29T00:00:00");
+            const { days, weeks } =
+                getDaysAndWeeksRemaining();
 
-            // 📅 Today
-            const today = new Date();
+            const months =
+                getMonthsRemaining();
 
-            // Remove time component
-            today.setHours(0, 0, 0, 0);
-
-            const diffTime = targetDate - today;
-
-            const days = Math.ceil(
-                diffTime / (1000 * 60 * 60 * 24)
-            );
-
-            const weeks = Math.ceil(days / 7);
+            const time =
+                getTimeRemaining();
 
             setDaysRemaining(days);
             setWeeksRemaining(weeks);
+            setMonthsRemaining(months);
+            setTimeRemaining(time);
 
         };
 
-        calculateDays();
+        // Run immediately
+        updateCountdown();
+
+        // Run every second
+        const interval =
+            setInterval(updateCountdown, 1000);
+
+        return () => clearInterval(interval);
 
     }, []);
-
     return (
         <>
             <section className="relative min-h-[85vh] flex flex-col justify-center bg-black overflow-hidden pt-16">
@@ -150,12 +223,21 @@ const CatPrimaryMission = () => {
                             Days Until 29 November 2026
 
                         </p>
+                        <div className="flex justify-center gap-8">
 
-                        <p className="text-zinc-500 font-mono text-xs uppercase tracking-[0.4em]">
+                            <p className="text-zinc-500 font-mono text-xs uppercase tracking-[0.4em]">
 
-                            {weeksRemaining} Weeks Remaining
+                                {weeksRemaining} Weeks
 
-                        </p>
+                            </p>
+
+                            <p className="text-zinc-500 font-mono text-xs uppercase tracking-[0.4em]">
+
+                                {monthsRemaining} Months
+
+                            </p>
+
+                        </div>
 
                         <p className="text-[#dac2e3] text-xl md:text-2xl font-light italic">
 
