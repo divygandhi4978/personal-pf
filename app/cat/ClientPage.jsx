@@ -179,22 +179,65 @@ const CatPrimaryMission = () => {
         return () => clearInterval(interval);
 
     }, []);
+
+    const schedules = {
+        normal: [
+            { label: "VARC", start: 8, end: 11, time: "8:00 AM – 11:00 AM" },
+            { label: "DILR", start: 11, end: 13, time: "11:00 AM – 1:00 PM" },
+            { label: "Break", start: 13, end: 14, time: "1:00 PM – 2:00 PM" },
+            { label: "QA", start: 14, end: 16, time: "2:00 PM – 4:00 PM" },
+            { label: "Gym", start: 16, end: 17.5, time: "4:00 PM – 5:30 PM" },
+            { label: "Practice", start: 18.5, end: 20, time: "6:30 PM – 8:00 PM" },
+            { label: "Revision/Book", start: 21, end: 23, time: "9:00 PM – 11:00 PM" }
+        ],
+        classDay: [
+            { label: "VARC", start: 8, end: 11, time: "8:00 AM – 11:00 AM" },
+            { label: "DILR", start: 11, end: 13, time: "11:00 AM – 1:00 PM" },
+            { label: "Break", start: 13, end: 14, time: "1:00 PM – 2:00 PM" },
+            { label: "QA", start: 14, end: 16, time: "2:00 PM – 4:00 PM" },
+            { label: "Gym", start: 16, end: 17.5, time: "4:00 PM – 5:30 PM" },
+            { label: "IMS Class", start: 19, end: 21, time: "7:00 PM – 9:00 PM" },
+            { label: "Revision/Book", start: 22, end: 23, time: "10:00 PM – 11:00 PM" }
+        ]
+    };
+
+    const [currentTime, setCurrentTime] = useState(0);
+    const [todaySchedule, setTodaySchedule] = useState([]);
+
+    useEffect(() => {
+        const update = () => {
+            const now = new Date();
+            const hour = now.getHours() + now.getMinutes() / 60;
+            setCurrentTime(hour);
+
+            const day = now.getDay();
+            const isClassDay = [2, 4, 6].includes(day);
+            setTodaySchedule(isClassDay ? schedules.classDay : schedules.normal);
+        };
+
+        update();
+        const interval = setInterval(update, 60000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const isActive = (block) => currentTime >= block.start && currentTime < block.end;
+
     return (
         <>
-            <section className="relative min-h-[85vh] flex flex-col justify-center bg-black overflow-hidden pt-16">
+            <section className="relative min-h-[85vh] flex flex-col justify-center bg-black overflow-hidden pt-6">
 
                 {/* Background Aura */}
 
                 <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[150%] max-w-[1000px] h-[400px] bg-[#83479a]/15 blur-[120px] rounded-full pointer-events-none -z-10" />
 
-                <div className="max-w-6xl mx-auto px-6 space-y-16 text-center">
+                <div className="max-w-6xl mx-auto px-6 space-y-4 text-center">
 
                     {/* TITLE */}
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
 
-                        CAT 2026
-                        <span className="text-[#83479a]"> Execution Manual</span>
+                        <span className="text-[#83479a]">
+                            CAT 2026</span>
 
                     </h1>
 
@@ -228,7 +271,60 @@ const CatPrimaryMission = () => {
                             </p>
 
                         </div>
+                        <div className="w-full max-w-md flex flex-col gap-2.5">
 
+                            {todaySchedule.map((block, i) => {
+                                const active = isActive(block);
+
+                                return (
+                                    <div
+                                        key={i}
+                                        className={`
+                relative transition-all duration-700 ease-in-out
+                rounded-2xl p-[1.5px]
+                ${active
+                                                ? "bg-gradient-to-r from-purple-500 via-fuchsia-500 to-blue-500 shadow-[0_0_40px_-10px_rgba(168,85,247,0.4)] scale-[1.02] z-10"
+                                                : "bg-white/10 opacity-80"
+                                            }
+              `}
+                                    >
+                                        <div className={`
+                relative flex justify-between items-center
+                px-6 py-5 rounded-[15px] 
+                ${active ? "bg-[#0a0a0c]" : "bg-[#18181b]"}
+              `}>
+
+                                            <div className="flex items-center gap-4">
+                                                {/* The Bloating Pulse Point */}
+                                                {active && (
+                                                    <div className="relative flex h-3 w-3">
+                                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+                                                    </div>
+                                                )}
+
+                                                <span className={`
+                    text-xl font-black tracking-widest uppercase
+                    ${active ? "text-white" : "text-zinc-400"}
+                  `}>
+                                                    {block.label}
+                                                </span>
+                                            </div>
+
+                                            <div className="text-right">
+                                                <span className={`
+                    text-sm font-mono font-bold
+                    ${active ? "text-zinc-200" : "text-zinc-500"}
+                  `}>
+                                                    {block.time}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+
+                        </div>
                         <p className="text-[#dac2e3] text-xl md:text-2xl font-light italic">
 
                             Don't just solve, Solve with proper Approach.!
@@ -452,189 +548,6 @@ const CatPrimaryMission = () => {
             </section>
 
 
-            <section className="relative bg-black border-t border-white/10 py-24 overflow-hidden">
-
-                {/* Background Aura */}
-
-                <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[150%] max-w-[1000px] h-[350px] bg-[#83479a]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
-
-                <div className="max-w-6xl mx-auto px-6 space-y-16">
-
-                    {/* Header */}
-
-                    <div className="text-center space-y-4">
-
-                        <span className="text-zinc-500 font-mono text-xs uppercase tracking-[0.4em]">
-                            Daily Execution Flow
-                        </span>
-
-                        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
-
-                            Today's Plan —
-                            <span className="text-[#83479a]">
-                                {" "}{todayName}
-                            </span>
-
-                        </h2>
-
-                        <p className="text-zinc-500 text-sm uppercase tracking-[0.3em]">
-
-                            {isClassDay
-                                ? "Class Day Structure Active"
-                                : "Self Study Evening Structure Active"
-                            }
-
-                        </p>
-
-                    </div>
-
-                    {/* Timeline Grid */}
-
-                    <div className="grid md:grid-cols-2 gap-10">
-
-                        {/* MORNING */}
-
-                        <div className="border border-white/10 rounded-2xl p-8 space-y-4 bg-white/[0.03]">
-
-                            <h3 className="text-[#83479a] font-bold text-xl">
-                                Morning — VARC
-                            </h3>
-
-                            <ul className="space-y-2 text-zinc-300">
-
-                                <li>8:00 – 11:00 → VARC</li>
-
-                                <li className="text-zinc-500 text-sm">
-                                    Article ×1 + RC ×3 + Analysis
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        {/* QA */}
-
-                        <div className="border border-white/10 rounded-2xl p-8 space-y-4 bg-white/[0.03]">
-
-                            <h3 className="text-[#83479a] font-bold text-xl">
-                                Late Morning — QA
-                            </h3>
-
-                            <ul className="space-y-2 text-zinc-300">
-
-                                <li>11:00 – 1:00 → QA</li>
-
-                                <li className="text-zinc-500 text-sm">
-                                    Practice + Full Analysis
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        {/* BREAK */}
-
-                        <div className="border border-white/10 rounded-2xl p-8 space-y-4 bg-white/[0.03]">
-
-                            <h3 className="text-[#83479a] font-bold text-xl">
-                                Midday Break
-                            </h3>
-
-                            <ul className="space-y-2 text-zinc-300">
-
-                                <li>1:00 – 2:00 → Lunch + Reset</li>
-
-                            </ul>
-
-                        </div>
-
-                        {/* DILR */}
-
-                        <div className="border border-white/10 rounded-2xl p-8 space-y-4 bg-white/[0.03]">
-
-                            <h3 className="text-[#83479a] font-bold text-xl">
-                                Afternoon — DILR
-                            </h3>
-
-                            <ul className="space-y-2 text-zinc-300">
-
-                                <li>2:00 – 4:00 → DILR</li>
-
-                                <li className="text-zinc-500 text-sm">
-                                    2–3 Sets + Deep Analysis
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        {/* GYM */}
-
-                        <div className="border border-white/10 rounded-2xl p-8 space-y-4 bg-white/[0.03]">
-
-                            <h3 className="text-[#83479a] font-bold text-xl">
-                                Physical Reset
-                            </h3>
-
-                            <ul className="space-y-2 text-zinc-300">
-
-                                <li>4:00 – 5:30 → Gym</li>
-
-                            </ul>
-
-                        </div>
-
-                        {/* EVENING — Dynamic */}
-
-                        <div className="border border-[#83479a]/30 bg-[#83479a]/5 rounded-2xl p-8 space-y-4">
-
-                            <h3 className="text-[#83479a] font-bold text-xl">
-
-                                Evening Block
-
-                            </h3>
-
-                            <ul className="space-y-2 text-white">
-
-                                {isClassDay ? (
-
-                                    <>
-                                        <li>7:00 – 9:00 → IMS Classes</li>
-                                    </>
-
-                                ) : (
-
-                                    <>
-                                        <li>6:30 – 8:00 → QA / DILR Practice</li>
-                                    </>
-
-                                )}
-
-                            </ul>
-
-                        </div>
-
-                        {/* NIGHT */}
-
-                        <div className="border border-white/10 rounded-2xl p-8 space-y-4 bg-white/[0.03] md:col-span-2">
-
-                            <h3 className="text-[#83479a] font-bold text-xl">
-                                Night Reinforcement
-                            </h3>
-
-                            <ul className="space-y-2 text-zinc-300">
-
-                                <li>10:00 – 11:00 → Book Reading or Revision</li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
             <section className="relative bg-black border-t border-white/10 py-24 overflow-hidden">
 
                 {/* Background Aura */}
@@ -1072,7 +985,7 @@ const CatPrimaryMission = () => {
                         href="/cat/remember"
                         className="border border-[#83479a]/40 bg-[#83479a]/10 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-[#83479a]/20 transition"
                     >
-                         SIMCAT Playbook
+                        SIMCAT Playbook
                     </Link>
 
                 </div>
