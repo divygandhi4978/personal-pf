@@ -230,7 +230,7 @@ const CatPrimaryMission = () => {
 
                 <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[150%] max-w-[1000px] h-[400px] bg-[#83479a]/15 blur-[120px] rounded-full pointer-events-none -z-10" />
 
-                <div className="max-w-6xl mx-auto px-6 space-y-4 text-center">
+                <div className="max-w-6xl mx-auto px-6 space-y-8 text-center">
 
                     {/* TITLE */}
 
