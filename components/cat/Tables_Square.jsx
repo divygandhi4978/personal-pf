@@ -2,9 +2,134 @@
 import React, { useState } from "react";
 
 /* =========================
-   TABLE BLOCK
+   TRIG GRID TABLE — THEME MATCHED
 ========================= */
 
+const TrigGridTable = () => {
+
+  const angles = ["0°", "30°", "45°", "60°", "90°"];
+
+  const rows = [
+
+    {
+      label: "sin θ",
+      values: ["0", "1/2", "1/√2", "√3/2", "1"]
+    },
+
+    {
+      label: "cos θ",
+      values: ["1", "√3/2", "1/√2", "1/2", "0"]
+    },
+
+    {
+      label: "tan θ",
+      values: ["0", "1/√3", "1", "√3", "∞"]
+    },
+
+    /* FULL COVERAGE — Don't skip these */
+
+    {
+      label: "cosec θ",
+      values: ["∞", "2", "√2", "2/√3", "1"]
+    },
+
+    {
+      label: "sec θ",
+      values: ["1", "2/√3", "√2", "2", "∞"]
+    },
+
+    {
+      label: "cot θ",
+      values: ["∞", "√3", "1", "1/√3", "0"]
+    }
+
+  ];
+
+  return (
+
+    <div className="border border-white/10 rounded-sm overflow-hidden bg-white/[0.01]">
+
+      {/* Header */}
+
+      <div className="
+        grid grid-cols-6
+        bg-[#562e66]/20
+        text-[#9b51b3]
+        text-sm
+        font-black
+        uppercase
+        tracking-widest
+        text-center
+      ">
+
+        <div></div>
+
+        {angles.map((angle, i) => (
+
+          <div
+            key={i}
+            className="px-3 py-3 border-l border-white/10"
+          >
+            {angle}
+          </div>
+
+        ))}
+
+      </div>
+
+
+      {/* Body */}
+
+      {rows.map((row, r) => (
+
+        <div
+          key={r}
+          className="grid grid-cols-6 text-center text-[15px] text-white/90 font-medium"
+        >
+
+          {/* Row Label */}
+
+          <div className="
+            px-3 py-4
+            text-[#9b51b3]
+            font-black
+            border-t border-white/10
+          ">
+
+            {row.label}
+
+          </div>
+
+
+          {/* Values */}
+
+          {row.values.map((val, i) => (
+
+            <div
+              key={i}
+              className="
+                px-3 py-4
+                border-l border-white/10
+                border-t border-white/10
+                font-bold text-white
+              "
+            >
+
+              {val}
+
+            </div>
+
+          ))}
+
+        </div>
+
+      ))}
+
+    </div>
+
+  );
+
+};
 const TableBlock = ({ number }) => {
   return (
     <div className="border border-white/10 rounded-sm p-3 bg-white/[0.01]">
@@ -251,9 +376,15 @@ export default function MathMemoryToolkit() {
         >
           Fractions
         </button>
+        
+        <button
+          onClick={() => setActive("trig")}
+          className={`${btn} ${active === "trig" ? activeBtn : inactiveBtn}`}
+        >
+          Trig Table
+        </button>
 
       </div>
-
 
       {/* Content */}
 
@@ -266,6 +397,12 @@ export default function MathMemoryToolkit() {
             headers={["Number", "Square"]}
             rows={squares}
           />
+        )}
+
+        {active === "trig" && (
+
+          <TrigGridTable />
+
         )}
 
         {active === "cubes" && (
