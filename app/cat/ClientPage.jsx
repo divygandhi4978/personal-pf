@@ -272,7 +272,6 @@ const CatPrimaryMission = () => {
 
                         </div>
                         <div className="w-full max-w-md flex flex-col gap-2.5">
-
                             {todaySchedule.map((block, i) => {
                                 const active = isActive(block);
 
@@ -281,54 +280,79 @@ const CatPrimaryMission = () => {
                                         key={i}
                                         className={`
                 relative transition-all duration-700 ease-in-out
-                rounded-2xl p-[1.5px]
+                rounded-xl sm:rounded-2xl 
+                p-[1px] sm:p-[1.5px]
+                
                 ${active
-                                                ? "bg-gradient-to-r from-purple-500 via-fuchsia-500 to-blue-500 shadow-[0_0_40px_-10px_rgba(168,85,247,0.4)] scale-[1.02] z-10"
+                                                ? "bg-gradient-to-r from-purple-500 via-fuchsia-500 to-blue-500 shadow-[0_0_30px_-10px_rgba(168,85,247,0.4)] sm:shadow-[0_0_40px_-10px_rgba(168,85,247,0.4)] scale-[1.01] sm:scale-[1.02] z-10"
                                                 : "bg-white/10 opacity-80"
                                             }
-              `}
+            `}
                                     >
                                         <div className={`
                 relative flex justify-between items-center
-                px-6 py-5 rounded-[15px] 
-                ${active ? "bg-[#0a0a0c]" : "bg-[#18181b]"}
-              `}>
+                px-3 sm:px-5 md:px-6 
+                py-3 sm:py-4 md:py-5
+                rounded-[12px] sm:rounded-[15px]
 
-                                            <div className="flex items-center gap-4">
-                                                {/* The Bloating Pulse Point */}
+                ${active ? "bg-[#0a0a0c]" : "bg-[#18181b]"}
+            `}>
+
+                                            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0">
+
+                                                {/* Pulse */}
                                                 {active && (
-                                                    <div className="relative flex h-3 w-3">
+                                                    <div className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3 shrink-0">
                                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+                                                        <span className="relative inline-flex rounded-full h-full w-full bg-purple-500"></span>
                                                     </div>
                                                 )}
 
                                                 <span className={`
-                    text-xl font-black tracking-widest uppercase
-                    ${active ? "text-white" : "text-zinc-400"}
-                  `}>
+                        text-sm sm:text-lg md:text-xl
+                        font-black tracking-wide sm:tracking-widest uppercase
+                        truncate
+
+                        ${active ? "text-white" : "text-zinc-400"}
+                    `}>
                                                     {block.label}
                                                 </span>
+
                                             </div>
 
-                                            <div className="text-right">
+                                            <div className="text-right shrink-0">
+
                                                 <span className={`
-                    text-sm font-mono font-bold
-                    ${active ? "text-zinc-200" : "text-zinc-500"}
-                  `}>
+                        text-xs sm:text-sm
+                        font-mono font-bold
+
+                        ${active ? "text-zinc-200" : "text-zinc-500"}
+                    `}>
                                                     {block.time}
                                                 </span>
+
                                             </div>
+
                                         </div>
                                     </div>
                                 );
                             })}
 
-                        </div>
-                        <p className="text-[#dac2e3] text-xl md:text-2xl font-light italic">
+                        </div><div className="flex flex-col items-center justify-center text-center space-y-3 md:space-y-4 px-6 py-8">
 
-                            Don't just solve, Solve with proper Approach.!
-                        </p>
+                            <h2 className="text-[#83479a] text-3xl sm:text-3xl md:text-3xl font-light italic">
+                                Accuracy over Ego.
+                            </h2>
+
+                            <h2 className="text-[#e0dee0] text-3xl sm:text-3xl md:text-3xl font-light italic">
+                                Learn. Analyse. Resolve.
+                            </h2>
+
+                            <h2 className="text-[#83479a] text-xl sm:text-2xl md:text-3xl font-light italic max-w-2xl leading-relaxed">
+                                Don't just solve — Solve with proper approach.
+                            </h2>
+
+                        </div>
 
                         <DailyQuoteSection />
                     </div>
