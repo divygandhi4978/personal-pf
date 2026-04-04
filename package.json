@@ -22,8 +22,10 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-github-calendar": "^4.5.7",
+    "react-is": "^19.2.4",
     "react-loaderkit": "^3.0.1",
     "react-spinners": "^0.17.0",
+    "recharts": "^3.8.1",
     "tailwind-scrollbar": "^4.0.2"
   },
   "devDependencies": {

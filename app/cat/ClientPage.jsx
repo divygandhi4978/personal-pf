@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import DailyQuoteSection from "@/components/cat/Quotes"
+import CatGrowthCurve from "@/components/cat/GrowthCurve";
 
 const CatPrimaryMission = () => {
 
@@ -73,7 +74,7 @@ const CatPrimaryMission = () => {
 
     // TTS → Tue Thu Sat
     const classDays = [2, 4, 6];
-
+    const [openBlock, setOpenBlock] = useState(null);
     const isClassDay = classDays.includes(dayNumber);
     const [errorOpen, setErrorOpen] = useState(false);
     const [careerOpen, setCareerOpen] = useState(false);
@@ -88,6 +89,7 @@ const CatPrimaryMission = () => {
         "Friday",
         "Saturday"
     ];
+
 
     const todayName = dayNames[dayNumber];
 
@@ -204,6 +206,44 @@ const CatPrimaryMission = () => {
     const [currentTime, setCurrentTime] = useState(0);
     const [todaySchedule, setTodaySchedule] = useState([]);
 
+    const blockTasks = {
+
+        VARC: [
+            "Article Reading - 1 : 30min ",
+            "Regular tasks - IMS",
+            "Practice Sets - 3/4",
+            "Analysis",
+            "Magoosh"
+        ],
+
+        DILR: [
+            "Mind Games - Different game Daily",
+            "Regular Task - IMS",
+            "Practice Sets - 3/4 : Different Topic and Approach",
+            "Analysis, Rebuild Solution with proper Approach"
+        ],
+
+        QA: [
+            "Regular Task - IMS",
+            "Think in depth the Concept",
+            "Analysis & Revision"
+        ],
+
+        Practice: [
+            "Mixed Practice"
+        ],
+
+        Gym: [
+            "Workout"
+        ],
+
+        "Revision/Book": [
+            "Revision",
+            "Read Books : 45 Min"
+        ]
+
+    };
+
     useEffect(() => {
         const update = () => {
             const now = new Date();
@@ -270,97 +310,96 @@ const CatPrimaryMission = () => {
 
                             </p>
 
-                        </div>
-                        <div className="w-full max-w-md flex flex-col gap-2.5">
+                        </div><div className="w-full max-w-md flex flex-col gap-3">
                             {todaySchedule.map((block, i) => {
                                 const active = isActive(block);
+                                const isOpen = openBlock === block.label;
 
                                 return (
-                                    <div
-                                        key={i}
-                                        className={`
-                relative transition-all duration-700 ease-in-out
-                rounded-xl sm:rounded-2xl 
-                p-[1px] sm:p-[1.5px]
-                
-                ${active
-                                                ? "bg-gradient-to-r from-purple-500 via-fuchsia-500 to-blue-500 shadow-[0_0_30px_-10px_rgba(168,85,247,0.4)] sm:shadow-[0_0_40px_-10px_rgba(168,85,247,0.4)] scale-[1.01] sm:scale-[1.02] z-10"
-                                                : "bg-white/10 opacity-80"
-                                            }
-            `}
-                                    >
-                                        <div className={`
-                relative flex justify-between items-center
-                px-3 sm:px-5 md:px-6 
-                py-3 sm:py-4 md:py-5
-                rounded-[12px] sm:rounded-[15px]
+                                    <div key={i} className="flex flex-col">
+                                        {/* CLICKABLE BLOCK */}
+                                        <button
+                                            onClick={() => setOpenBlock(isOpen ? null : block.label)}
+                                            className={`
+                        w-full text-left transition-all duration-300 ease-in-out
+                        rounded-xl sm:rounded-2xl p-[1px]
+                        ${active
+                                                    ? "bg-gradient-to-r from-purple-500 via-fuchsia-500 to-blue-500 shadow-lg scale-[1.02] z-10"
+                                                    : "bg-white/10 hover:bg-white/20 opacity-90"
+                                                }
+                    `}
+                                        >
+                                            <div className={`
+                        relative flex justify-between items-center
+                        px-4 sm:px-6 py-4
+                        rounded-[11px] sm:rounded-[15px]
+                        ${active ? "bg-[#0a0a0c]" : "bg-[#18181b]"}
+                    `}>
+                                                <div className="flex items-center gap-3 min-w-0">
+                                                    {/* Pulse Indicator */}
+                                                    {active ? (
+                                                        <div className="relative flex h-2.5 w-2.5 shrink-0">
+                                                            <span className="animate-ping absolute h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                                                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="h-1.5 w-1.5 rounded-full bg-zinc-600 shrink-0" />
+                                                    )}
 
-                ${active ? "bg-[#0a0a0c]" : "bg-[#18181b]"}
-            `}>
+                                                    <span className={`
+                                text-sm sm:text-base md:text-lg
+                                font-bold tracking-tight uppercase truncate
+                                ${active ? "text-white" : "text-zinc-400"}
+                            `}>
+                                                        {block.label}
+                                                    </span>
+                                                </div>
 
-                                            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0">
+                                                <div className="flex items-center gap-3 shrink-0">
+                                                    <span className={`
+                                text-[10px] sm:text-xs font-mono
+                                ${active ? "text-purple-300" : "text-zinc-500"}
+                            `}>
+                                                        {block.time}
+                                                    </span>
 
-                                                {/* Pulse */}
-                                                {active && (
-                                                    <div className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3 shrink-0">
-                                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                                                        <span className="relative inline-flex rounded-full h-full w-full bg-purple-500"></span>
-                                                    </div>
+                                                    {/* Simple Chevron Icon */}
+                                                    <svg
+                                                        className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''} ${active ? 'text-white' : 'text-zinc-600'}`}
+                                                        fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </button>
+
+                                        {/* EXPANDABLE TASK AREA */}
+                                        {isOpen && (
+                                            <div className="
+                        mx-2 px-4 py-3
+                        bg-white/[0.03] border-l-2 border-purple-500/50
+                        rounded-b-lg space-y-2.5
+                        animate-in slide-in-from-top-2 duration-300
+                    ">
+                                                {(blockTasks[block.label] || []).length > 0 ? (
+                                                    blockTasks[block.label].map((task, idx) => (
+                                                        <div key={idx} className="flex items-start gap-3">
+                                                            <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-purple-500/60 shrink-0" />
+                                                            <p className="text-sm text-zinc-300 leading-tight">
+                                                                {task}
+                                                            </p>
+                                                        </div>
+                                                    ))
+                                                ) : (
+                                                    <p className="text-xs italic text-zinc-500">No tasks scheduled</p>
                                                 )}
-
-                                                <span className={`
-                        text-sm sm:text-lg md:text-xl
-                        font-black tracking-wide sm:tracking-widest uppercase
-                        truncate
-
-                        ${active ? "text-white" : "text-zinc-400"}
-                    `}>
-                                                    {block.label}
-                                                </span>
-
                                             </div>
-
-                                            <div className="text-right shrink-0">
-
-                                                <span className={`
-                        text-xs sm:text-sm
-                        font-mono font-bold
-
-                        ${active ? "text-zinc-200" : "text-zinc-500"}
-                    `}>
-                                                    {block.time}
-                                                </span>
-
-                                            </div>
-
-                                        </div>
+                                        )}
                                     </div>
                                 );
                             })}
-
-                        </div><div className="flex flex-col items-center justify-center text-center space-y-3 md:space-y-4 px-6 py-8">
-
-                            <h2 className="text-[#83479a] text-3xl sm:text-3xl md:text-3xl font-light italic">
-                                Accuracy over Ego.
-                            </h2>
-
-                            <h2 className="text-[#e0dee0] text-3xl sm:text-3xl md:text-3xl font-light italic">
-                                Learn. Analyse. Resolve.
-                            </h2>
-
-                            <h2 className="text-[#83479a] text-xl sm:text-2xl md:text-3xl font-light italic max-w-2xl leading-relaxed">
-                                Don't just solve — Solve with proper approach.
-                            </h2>
-
                         </div>
-
-                        <DailyQuoteSection />
-                    </div>
-
-                    {/* PRIMARY RULES — BULLET FORMAT */}
-
-                    <div className="grid md:grid-cols-2 gap-5 ">
-
                         <Link href="/cat/math">
 
                             <button
@@ -385,6 +424,32 @@ const CatPrimaryMission = () => {
                             </button>
 
                         </Link>
+                        
+                        
+                        <div className="flex flex-col items-center justify-center text-center space-y-3 md:space-y-4 px-6 py-8">
+
+                            <h2 className="text-[#83479a] text-3xl sm:text-3xl md:text-3xl font-light italic">
+                                Accuracy over Ego.
+                            </h2>
+
+                            <h2 className="text-[#e0dee0] text-3xl sm:text-3xl md:text-3xl font-light italic">
+                                Learn. Analyse. Resolve.
+                            </h2>
+
+                            <h2 className="text-[#83479a] text-xl sm:text-2xl md:text-3xl font-light italic max-w-2xl leading-relaxed">
+                                Don't just solve — Solve with proper approach.
+                            </h2>
+
+                        </div>
+
+                        <DailyQuoteSection />
+                        <CatGrowthCurve />
+                    </div>
+
+                    {/* PRIMARY RULES — BULLET FORMAT */}
+
+                    <div className="grid md:grid-cols-2 gap-5 ">
+
                         {/* LEFT CARD */}
 
                         <div className="border border-[#83479a]/30 bg-[#83479a]/5 rounded-2xl p-8">
