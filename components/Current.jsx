@@ -29,14 +29,28 @@ const projects = [
     source: "#",
   },
   {
-    title: "E-Cell GECG Portal",
-    type: "Full-Stack // Events",
+    title: "Finsight — Healthcare Sector Intelligence System",
+    type: "FinTech // Equity Research Automation // Financial Intelligence",
     description:
-      "A centralized platform for startup ecosystems, workshops, and bootcamps. Designed to streamline registration and showcase entrepreneurial development within the GECG network.",
-    skills: ["MERN Stack", "Node.js", "MongoDB", "Tailwind"],
-    preview: "https://ecell-lake.vercel.app/",
-    source: "#",
-  },
+      "Finsight is a modular financial intelligence platform designed to automate equity research workflows for Indian hospital companies. The system ingests quarterly filings, extracts structured financial data, computes key ratios, performs valuation modeling using DCF methods, detects emerging risks through LLM-based analysis, and visualizes peer-level performance through interactive dashboards. Built to simulate institutional research workflows, Finsight enables continuous monitoring of sector fundamentals and investment signals.",
+    skills: [
+      "Python",
+      "Streamlit",
+      "PostgreSQL",
+      "FastAPI",
+      "Pandas",
+      "NumPy",
+      "Plotly",
+      "Financial Modeling",
+      "DCF Valuation",
+      "Time-Series Analysis",
+      "LLM Integration",
+      "Data Engineering",
+      "Automation Workflows"
+    ],
+    preview: "#",
+    source: "#"
+  }
 ];
 
 const Projects = () => {
