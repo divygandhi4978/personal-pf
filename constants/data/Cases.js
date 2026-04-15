@@ -9,19 +9,20 @@ export const caseStudies = [
         date: "18 March 2026",
         readTime: "8 min",
         link: "/cases/cams",
-    },{
-    title: "Hospitals: The Paradox of Expansion",
+    },
+//     {
+//     title: "Hospitals: The Paradox of Expansion",
 
-    category: "Healthcare Sector Economics",
+//     category: "Healthcare Sector Economics",
 
-    description:
-        "Analyzes why hospital chains, despite rapid bed expansion and rising healthcare demand, face margin pressure due to long gestation periods, utilization lags, and capital-heavy growth cycles—highlighting the trade-off between capacity expansion and profitability stability.",
+//     description:
+//         "Analyzes why hospital chains, despite rapid bed expansion and rising healthcare demand, face margin pressure due to long gestation periods, utilization lags, and capital-heavy growth cycles—highlighting the trade-off between capacity expansion and profitability stability.",
 
-    date: "22 March 2026",
+//     date: "22 March 2026",
 
-    readTime: "10 min",
+//     readTime: "10 min",
 
-    link: "/cases/healthcare",
-}
-    // future studies go here
+//     link: "/cases/healthcare",
+// }
+//     // future studies go here
 ];
