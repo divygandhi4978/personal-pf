@@ -28,25 +28,24 @@ const projects = [
     preview: "#",
     source: "#",
   },
- {
-  title: "Finsight — Healthcare Sector Research Platform",
-  type: "FinTech // Equity Research",
+{
+  title: "Finsight — Healthcare Sector Case Study",
+
+  type: "Equity Research Case Study",
 
   description:
-    "Finsight is a financial research platform built to analyze Indian hospital companies. It tracks quarterly results, compares companies across key financial metrics, estimates intrinsic value using DCF models, and highlights major risks from company reports. The goal was to simulate how an equity research analyst monitors a sector over time using data and automation.",
+    "A structured case study analyzing Indian hospital businesses through operational drivers, lifecycle stages, risk factors, and valuation frameworks. Designed to simulate how an equity research analyst builds a sector-level investment thesis.",
 
   skills: [
-    "Python",
-    "Streamlit",
-    "Pandas",
-    "NumPy",
-    "Plotly",
+    "Equity Research",
+    "Healthcare Sector Analysis",
     "Financial Modeling",
     "DCF Valuation",
-    "LLM Integration"
+    "Business Economics",
+    "Risk Analysis"
   ],
 
-  preview: "#",
+  preview: "/cases/healthcare",
   source: "#"
 }
 ];
