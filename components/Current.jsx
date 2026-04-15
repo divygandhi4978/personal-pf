@@ -29,7 +29,7 @@ const projects = [
     source: "#",
   },
 {
-  title: "Finsight — Healthcare Sector Case Study",
+  title: "Healthcare Sector Case Study",
 
   type: "Equity Research Case Study",
 
