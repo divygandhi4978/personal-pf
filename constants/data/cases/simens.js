@@ -13,7 +13,7 @@ const siemensStudyData = {
   date: "March 2026",
 
   image:
-    "https://tse4.mm.bing.net/th/id/OIP.vMOi1ZLwRsv5hiSUzE4ZhAHaD4?pid=Api&P=0&h=180",
+    "/siemens/1.webp",
   // image:
   //   "/cases/simens/hero.png",
 
