@@ -9,28 +9,28 @@ export const caseStudies = [
         date: "18 March 2026",
         readTime: "8 min",
         link: "/cases/cams",
-    },{
-    title: "Siemens: The Digital Industrial Pivot",
-    category: "Corporate Strategy",
-    description: 
-        "An analysis of Siemens’ transition from a diversified conglomerate to a focused industrial tech leader—examining how the 'Digital Industries' shift combats conglomerate discount, the integration of SaaS into hardware cycles, and the strategic decoupling of energy and healthcare units.",
-    date: "20 April 2026",
-    readTime: "9 min",
-    link: "/cases/simens",
-},
-//     {
-//     title: "Hospitals: The Paradox of Expansion",
+    }, {
+        title: "Siemens: The Digital Industrial Pivot",
+        category: "Corporate Strategy",
+        description:
+            "An analysis of Siemens’ transition from a diversified conglomerate to a focused industrial tech leader—examining how the 'Digital Industries' shift combats conglomerate discount, the integration of SaaS into hardware cycles, and the strategic decoupling of energy and healthcare units.",
+        date: "20 April 2026",
+        readTime: "9 min",
+        link: "https://github.com/divygandhi4978/research/blob/main/companies/siemens-india.md",
+    },
+    //     {
+    //     title: "Hospitals: The Paradox of Expansion",
 
-//     category: "Healthcare Sector Economics",
+    //     category: "Healthcare Sector Economics",
 
-//     description:
-//         "Analyzes why hospital chains, despite rapid bed expansion and rising healthcare demand, face margin pressure due to long gestation periods, utilization lags, and capital-heavy growth cycles—highlighting the trade-off between capacity expansion and profitability stability.",
+    //     description:
+    //         "Analyzes why hospital chains, despite rapid bed expansion and rising healthcare demand, face margin pressure due to long gestation periods, utilization lags, and capital-heavy growth cycles—highlighting the trade-off between capacity expansion and profitability stability.",
 
-//     date: "22 March 2026",
+    //     date: "22 March 2026",
 
-//     readTime: "10 min",
+    //     readTime: "10 min",
 
-//     link: "/cases/healthcare",
-// }
-//     // future studies go here
+    //     link: "/cases/healthcare",
+    // }
+    //     // future studies go here
 ];
