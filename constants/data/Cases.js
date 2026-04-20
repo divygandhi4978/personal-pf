@@ -9,7 +9,15 @@ export const caseStudies = [
         date: "18 March 2026",
         readTime: "8 min",
         link: "/cases/cams",
-    },
+    },{
+    title: "Siemens: The Digital Industrial Pivot",
+    category: "Corporate Strategy",
+    description: 
+        "An analysis of Siemens’ transition from a diversified conglomerate to a focused industrial tech leader—examining how the 'Digital Industries' shift combats conglomerate discount, the integration of SaaS into hardware cycles, and the strategic decoupling of energy and healthcare units.",
+    date: "20 April 2026",
+    readTime: "9 min",
+    link: "/cases/simens",
+},
 //     {
 //     title: "Hospitals: The Paradox of Expansion",
 

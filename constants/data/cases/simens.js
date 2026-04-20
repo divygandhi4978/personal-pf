@@ -13,7 +13,7 @@ const siemensStudyData = {
   date: "March 2026",
 
   image:
-    "/siemens/1.webp",
+    "/images/siemens/1.webp",
   // image:
   //   "/cases/simens/hero.png",
 
@@ -44,7 +44,8 @@ studySnapshot: {
 
   }
 
-}
+},
+
 };
 
 export default siemensStudyData;
