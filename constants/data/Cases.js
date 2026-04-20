@@ -22,9 +22,9 @@ export const caseStudies = [
     category: "Industry Research",
     description:
         "A deep-dive industry analysis of the Indian hospital sector examining scale economics, occupancy-driven margin expansion, ARPOB pricing dynamics, payor mix risks, and capital-intensive growth cycles. The study evaluates capacity expansion trends across major hospital chains, maturity-stage economics, insurance-driven pricing pressure, and long-term structural growth drivers shaping tertiary healthcare delivery.",
-    date: "20 April 2026",
+    date: "23 April 2026",
     readTime: "14 min",
-    link: "https://github.com/divygandhi4978/research/blob/main/industries/hospital_industry.md",
+    link: "https://github.com/divygandhi4978/research/blob/main/industry/hospital_industry.md",
 }
     //     {
     //     title: "Hospitals: The Paradox of Expansion",
