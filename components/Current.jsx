@@ -27,25 +27,24 @@ const projects = [
 
     preview: "#",
     source: "#",
-  },
-{
-  title: "Healthcare Sector Case Study",
+  },{
+  title: "Finsight : Portfolio Risk & Performance Analytics",
 
-  type: "Equity Research Case Study",
+  type: "Financial Analytics with System Implementation",
 
   description:
-    "A structured case study analyzing Indian hospital businesses through operational drivers, lifecycle stages, risk factors, and valuation frameworks. Designed to simulate how an equity research analyst builds a sector-level investment thesis.",
+    "A finance-focused portfolio analytics platform built to evaluate investment performance, quantify drawdown risk, compare benchmark-relative returns, monitor allocation drift, and forecast liquidity from fixed-income maturities within a structured analytics system.",
 
   skills: [
-    "Equity Research",
-    "Healthcare Sector Analysis",
-    "Financial Modeling",
-    "DCF Valuation",
-    "Business Economics",
-    "Risk Analysis"
+    "Portfolio Risk Analytics",
+    "Benchmark & Performance Evaluation",
+    "Asset Allocation Analysis",
+    "Rebalancing Engine",
+    "Financial Systems Design"
   ],
 
-  preview: "/cases/healthcare",
+  preview: "https://finsight-dg1.streamlit.app/",
+
   source: "#"
 }
 ];

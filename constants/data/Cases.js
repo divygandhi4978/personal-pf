@@ -17,15 +17,28 @@ export const caseStudies = [
         date: "20 April 2026",
         readTime: "9 min",
         link: "https://github.com/divygandhi4978/research/blob/main/companies/siemens-india.md",
-    },{
-    title: "Indian Hospital Industry: Scale, Utilization & Capital Cycle Dynamics",
-    category: "Industry Research",
-    description:
-        "A deep-dive industry analysis of the Indian hospital sector examining scale economics, occupancy-driven margin expansion, ARPOB pricing dynamics, payor mix risks, and capital-intensive growth cycles. The study evaluates capacity expansion trends across major hospital chains, maturity-stage economics, insurance-driven pricing pressure, and long-term structural growth drivers shaping tertiary healthcare delivery.",
-    date: "23 April 2026",
-    readTime: "14 min",
-    link: "https://github.com/divygandhi4978/research/blob/main/industry/hospital_industry.md",
-}
+    }, {
+        title: "IPL Franchise Economics: Visibility vs Profitability",
+
+        category: "Industry Research",
+
+        description:
+            "Industry note explaining how IPL teams generate profits through media rights, sponsorships, and brand visibility rather than match wins alone. Covers revenue structure, franchise valuation drivers, and key business risks.",
+
+        date: "23 April 2026",
+
+        readTime: "10 min",
+
+        link: "https://github.com/divygandhi4978/research/blob/main/industry/ipl_model.md"
+    }, {
+        title: "Indian Hospital Industry: Utilization-Led Profitability & Capital Intensity",
+        category: "Industry Research",
+        description:
+            "Analysis of the Indian hospital sector focused on occupancy-driven margin expansion, ARPOB-led revenue growth, payor mix shifts, and capital-heavy capacity expansion cycles. Evaluates how scale, utilization, and pricing discipline shape long-term returns.",
+        date: "23 April 2026",
+        readTime: "14 min",
+        link: "https://github.com/divygandhi4978/research/blob/main/industry/hospital_industry.md",
+    }
     //     {
     //     title: "Hospitals: The Paradox of Expansion",
 
