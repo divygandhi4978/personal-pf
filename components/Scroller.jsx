@@ -4,29 +4,28 @@ import Achievements from "../constants/images/Achievements";
 import Image from "next/image";
 
 export default function AchievementsSlider() {
-  const ach = [
-    {
-      title:
-        "Completed Financial Accounting and Analysis Certification with 86/100 score",
-      image: Achievements.iimbx,
-    },
-    {
-      title: "Secured 2nd rank out of 133 Peers in Semester-3",
-      image: Achievements.i2,
-    },
-    {
-      title: "Completed SEBI Investor Certification with 45/50 marks",
-      image: Achievements.NSIM,
-    },
-    {
-      title: "Achieved Certificate of Excellence at Devang Mehta IT Awards",
-      image: Achievements.i1,
-    },
-    {
-      title: "Completed Capital Markets Course at Infosys Springboard",
-      image: Achievements.i3,
-    },
-  ];
+ const ach = [
+  {
+    title: "Financial Accounting & Analysis — 86/100 (IIMBx)",
+    image: Achievements.iimbx,
+  },
+  {
+    title: "Rank 2 / 133 Students — Semester Performance",
+    image: Achievements.i2,
+  },
+  {
+    title: "SEBI Investor Certification — 45/50",
+    image: Achievements.NSIM,
+  },
+  {
+    title: "Certificate of Excellence — Devang Mehta IT Awards - Rank 3 / 133 in gecg28",
+    image: Achievements.i1,
+  },
+  {
+    title: "Capital Markets Course — Infosys Springboard",
+    image: Achievements.i3,
+  },
+];
 
   const scrollRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);

@@ -1,29 +1,29 @@
 import React from "react";
 
 const experiences = [
+
   {
-    title: "Technical Lead",
-    org: "Entrepreneurship Cell — GECG",
-    period: "July 2025 — Present",
-    website: "https://ecell.gecg28.ac.in/index.html",
-    description: [
-      "Led a technical team of 8 members to design and manage digital platforms, increasing event participation by 40%.",
-      "Developed modern registration systems and interactive dashboards, reducing manual coordination time by 50%.",
-    ],
-    logo: "/images/ecell.jpg",
-  },
-  {
-    title: "Finance",
+    title: "Treasurer (Finance Lead)",
     org: "Hack The Spring '26 — GECG",
-    period: "Feb 2026 — Jan 2026",
+    period: "Jan 2026 — Feb 2026",
     website: "https://www.hackthespring.in/",
     description: [
-      "Owned end-to-end event budgeting and fund allocation across logistics, marketing, prizes, and operations, ensuring cost control and financial discipline.",
-      "Managed sponsor funds, vendor payments, and expense tracking, delivering accurate post-event financial reconciliation and ROI assessment.",
+      "Served as sole treasurer managing ₹2.5L+ in total event funds using Excel and structured financial tracking, overseeing sponsor inflows, vendor payments, and budget allocation across logistics, marketing, and operations.",
+      "Built categorized expense tracking and reconciliation workflows using Excel and Power BI dashboards to maintain financial accuracy and deliver complete post-event financial closure."
     ],
     logo: "/images/hts.ico",
-  },
-
+  }
+  , {
+    title: "Technical Lead",
+    org: "Entrepreneurship Cell — GECG",
+    period: "July 2025 — May 2026",
+    website: "https://ecell.gecg28.ac.in/index.html",
+    description: [
+      "Led a team of 8 developers to build and maintain digital platforms supporting event execution, contributing to a 40% increase in participation.",
+      "Designed structured registration workflows and operational dashboards using web technologies and Power BI, reducing manual coordination workload by approximately 50%."
+    ],
+    logo: "/images/ecell.jpg",
+  }
   // Add more experience objects here to see the stack grow
 ];
 
@@ -45,8 +45,7 @@ const ExperienceSection = () => {
             </h2>
           </div>
           <p className="text-white/30 text-sm md:text-base max-w-xs md:text-right font-light italic">
-            "Applying engineering rigor to drive organizational growth and
-            efficiency."
+            "Executing structured systems to support operational and financial discipline."
           </p>
         </div>
 
@@ -56,11 +55,10 @@ const ExperienceSection = () => {
             <div
               key={index}
               className={`grid lg:grid-cols-[300px_1fr] group transition-all duration-150 border-b border-white/5 last:border-0
-    ${
-      index % 2 === 0
-        ? "bg-black hover:bg-white/[0.02]"
-        : "bg-white/[0.015] hover:bg-white/[0.03]"
-    }
+    ${index % 2 === 0
+                  ? "bg-black hover:bg-white/[0.02]"
+                  : "bg-white/[0.015] hover:bg-white/[0.03]"
+                }
   `}
             >
               {/* Sidebar: Meta Data */}

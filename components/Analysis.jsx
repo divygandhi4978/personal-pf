@@ -16,8 +16,7 @@ const Projects = () => {
                         Selected // Work
                     </span>
                     <h2 className="text-5xl md:text-7xl font-semibold tracking-tighter text-white">
-                        Thinking.
-                    </h2>
+Analysis.                    </h2>
                 </div>
 
                 {/* Sticky Stack */}
@@ -52,8 +51,7 @@ const Projects = () => {
                                             href={project.link}
                                             className="inline-flex items-center gap-2 text-white font-bold text-xs uppercase tracking-[0.2em] hover:opacity-70 transition-opacity"
                                         >
-                                            Read Case →
-                                        </Link>
+View Analysis →                                        </Link>
 
                                     </div>
                                 </div>

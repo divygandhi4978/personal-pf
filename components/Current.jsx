@@ -15,38 +15,17 @@ const projects = [
     type: "Computer Science // Finance & Investing // Business Strategy",
 
     description:
-      "Currently building a strong foundation at the intersection of technology, finance, and business. Focused on computer science fundamentals, financial markets, and strategic thinking while preparing for long-term goals of pursuing an MBA and CFA and working in fintech and investment-oriented roles.",
-
+      "Building foundations across computer science, financial markets, and business thinking. Focused on strengthening technical depth, market understanding, and analytical discipline while preparing for MBA-level learning.",
     skills: [
-      "Studying computer science fundamentals and backend systems",
-      "Learning financial markets, investing principles, and valuation",
-      "Reading annual reports and analyzing business models",
-      "Preparing for MBA-level business thinking and case analysis",
-      "Exploring fintech platforms, digital finance, and technology-driven financial infrastructure",
+      "Computer Science Fundamentals",
+      "Financial Markets & Investing",
+      "Annual Report Analysis",
+      "Business & Case Thinking",
+      "FinTech Ecosystem Learning"
     ],
-
     preview: "#",
     source: "#",
-  },{
-  title: "Finsight : Portfolio Risk & Performance Analytics",
-
-  type: "Financial Analytics with System Implementation",
-
-  description:
-    "A finance-focused portfolio analytics platform built to evaluate investment performance, quantify drawdown risk, compare benchmark-relative returns, monitor allocation drift, and forecast liquidity from fixed-income maturities within a structured analytics system.",
-
-  skills: [
-    "Portfolio Risk Analytics",
-    "Benchmark & Performance Evaluation",
-    "Asset Allocation Analysis",
-    "Rebalancing Engine",
-    "Financial Systems Design"
-  ],
-
-  preview: "https://finsight-dg1.streamlit.app/",
-
-  source: "#"
-}
+  }
 ];
 
 const Projects = () => {

@@ -24,7 +24,7 @@ const Footer = () => {
             </span>
             <div className="flex items-baseline gap-4">
               <h2 className="text-5xl md:text-8xl font-semibold tracking-tighter text-white leading-none">
-                Links.
+                Network.
               </h2>
               {/* Highlighted Cases Link */}
               <Link 
@@ -32,15 +32,16 @@ const Footer = () => {
                 className="group flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full hover:border-[#562e66] transition-all duration-300"
               >
                 <Briefcase size={14} className="text-zinc-500 group-hover:text-[#562e66]" />
-                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 group-hover:text-white">Case_Studies</span>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 group-hover:text-white">Research_Cases</span>
                 <ChevronRight size={12} className="text-zinc-600 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
           
           <div className="text-left md:text-right space-y-1">
-            <p className="text-zinc-600 font-mono text-[10px] uppercase tracking-[0.3em]">System: Online</p>
-            <p className="text-zinc-500 font-mono text-[10px] uppercase tracking-widest italic">Vadodara, GJ, IN</p>
+            <p className="text-zinc-600 font-mono text-[10px] uppercase tracking-[0.3em]">  Profile: Active
+</p>
+            <p className="text-zinc-500 font-mono text-[10px] uppercase tracking-widest italic">Vadodara, Gujarat, India</p>
           </div>
         </div>
 
@@ -70,10 +71,7 @@ const Footer = () => {
         <div className="mt-16 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/5 pt-10 font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-600">
           
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#562e66] animate-pulse" />
-              <span className="text-zinc-400">v2.0.0</span>
-            </div>
+          
             <span>© {currentYear} // All Rights Reserved</span>
           </div>
 

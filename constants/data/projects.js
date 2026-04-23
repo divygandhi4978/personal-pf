@@ -12,7 +12,7 @@ import inv from "../images/finsight.gif";
 const list = [
   {
     head: "VaproShine",
-    data: "A mobile steam-cleaning booking platform with live job tracking and a business dashboard to monitor revenue, customers, and service performance.",
+    data: "A mobile steam-cleaning booking platform with live job tracking and dashboards to monitor revenue, customers, and operational performance.",
     preview: "https://pro-steam.vercel.app/",
     source: "https://github.com/divygandhi4978",
     img: vapro,
@@ -67,7 +67,7 @@ const list = [
   },
   {
     head: "VaproShine - PowerBI Dashboard",
-    data: "A 5-page Power BI admin dashboard for a service-based business, designed for decision-making, not vanity metrics. Tracks revenue conversion, customer retention, coupon impact, service ratings, and automation health with business-driven KPIs and defensive DAX.",
+    data: "A mobile steam-cleaning booking platform with live job tracking and dashboards to monitor revenue, customers, and operational performance.",
     preview: "https://github.com/divygandhi4978/PowerBI_Showcase",
     source: "https://github.com/divygandhi4978/PowerBI_Showcase",
     img: vapro_powerbi,
@@ -81,7 +81,7 @@ const list = [
   {
     head: "Investment Dashboard",
     data:
-      "Built a centralized investment dashboard to consolidate multi-asset portfolio data into a single decision view, improving visibility across holdings and reducing manual portfolio tracking effort. Integrated market and NAV data pipelines to enable consistent portfolio monitoring and structured allocation review.",
+      "Built a centralized investment dashboard to consolidate multi-asset portfolio data into a single decision view. Integrated market and NAV pipelines to improve portfolio visibility and enable structured allocation monitoring.",
 
     preview: "https://finsight16.streamlit.app/",
 
@@ -100,7 +100,7 @@ const list = [
   },
   {
     head: "Finsight – Equity Analysis Framework",
-    data: "A sector-agnostic equity analysis framework built around universal financial and decision-making layers rather than industry-specific metrics.",
+    data: "A sector-agnostic equity analysis framework built around core financial and decision-making layers instead of industry-specific indicators.",
     preview: null,
     source: null,
     img: finsight,
@@ -166,7 +166,7 @@ const list = [
   },
   {
     head: "DGMonitor",
-    data: "Tracks Vishwamitri water levels with custom alerts.",
+    data: "Tracks Vishwamitri water levels with automated alerts and monitoring.",
     preview: "https://thriving-pasca-979f1d.netlify.app/",
     source: "#",
     img: DGMonitor,
@@ -174,7 +174,7 @@ const list = [
   },
   {
     head: "SecureHold",
-    data: "Synchronize your passwords across multiple devices and explore additional security features.",
+    data: "A password management system enabling secure synchronization across devices with additional security features.",
     preview: "https://secure-hold-1.onrender.com/",
     source: "https://github.com/divygandhi4978/secure-hold",
     img: securehold,
@@ -190,7 +190,7 @@ const list = [
   },
   {
     head: "URLShortner",
-    data: "Shorten your urls with custom alias and expiration with QR Code.",
+    data: "A URL shortening service supporting custom aliases, expiration control, and QR code generation.",
     preview: "https://urlshortner1-0gcr.onrender.com/",
     source: "https://github.com/divygandhi4978/urlShortner",
     img: urlshortner,

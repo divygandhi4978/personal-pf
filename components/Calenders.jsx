@@ -13,11 +13,9 @@ export default function Calenders() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div className="space-y-4">
             <span className="text-[#562e66] font-mono text-xs font-bold uppercase tracking-[0.4em]">
-              Activity // Performance
-            </span>
+Engineering // Activity            </span>
             <h2 className="text-5xl md:text-7xl font-semibold tracking-tighter text-white leading-none">
-              The Hustle.
-            </h2>
+The Output.            </h2>
           </div>
 
           {/* Clean SaaS Toggle Switch */}
@@ -60,8 +58,7 @@ export default function Calenders() {
         {/* Footer Metric Hook */}
         <div className="mt-8 flex justify-end">
            <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest italic">
-             "Precision in code, persistence in problem-solving."
-           </p>
+"Consistent execution compounds into capability."           </p>
         </div>
       </div>
     </section>

@@ -33,16 +33,12 @@ const PortfolioHero = () => {
                 Divy Gandhi
               </h1>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-[#562e66] tracking-tight italic px-2 lg:px-0">
-                Bridging the gap between Finance and Code.
-              </h2>
+Learning finance through markets, data, and code.              </h2>
             </div>
 
             {/* Value Proposition: Bumped base text to text-lg for mobile */}
             <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed font-light mx-auto lg:mx-0 text-center lg:text-left px-2 sm:px-6 lg:px-0">
-              I’m currently exploring how <span className="text-white font-medium">technology reshapes finance</span>.
-              While I study <span className="text-white font-medium">Business Strategy</span>,
-              I’m building with the MERN stack and <span className="text-white font-medium">Power BI</span> to
-              turn raw numbers into systems that actually make sense.
+             I am building a foundation in financial markets and business strategy while pursuing my B.Tech in Computer Science. Alongside technical work, I apply code and data tools to analyze financial information and strengthen investment thinking.
             </p>
 
             {/* CTAs: Larger padding for easier tapping on mobile */}

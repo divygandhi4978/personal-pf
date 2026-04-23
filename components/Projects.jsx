@@ -12,11 +12,9 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 pt-24 mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <div className="space-y-4">
           <span className="text-[#562e66] font-mono text-xs font-bold uppercase tracking-[0.4em]">
-            Portfolio // Archive
-          </span>
+Portfolio // Implementations          </span>
           <h2 className="text-5xl md:text-8xl font-semibold tracking-tighter text-white leading-none">
-            The Works.
-          </h2>
+Systems.          </h2>
         </div>
       </div>
 
@@ -44,7 +42,7 @@ export default function Projects() {
             className="group flex items-center gap-4 py-4 px-10 rounded-full border border-white/10 hover:border-[#562e66] transition-all duration-500"
           >
             <span className="text-white/40 group-hover:text-white text-xs font-bold uppercase tracking-[0.2em]">
-              {showAll ? "Collapse Archive" : "Expand Full Portfolio"}
+              {showAll ? "Collapse Systems" : "Expand All Systems"}
             </span>
           </button>
         </div>

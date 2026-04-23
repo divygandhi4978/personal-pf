@@ -33,36 +33,35 @@ const Conclusion = () => {
           {/* Bio Content */}
           <div className="space-y-12">
             <div className="space-y-8">
-              <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.1]">
-                I'm <span className="text-[#562e66]">Divy Gandhi</span>, an engineer
-                turning data into capital decisions.
-              </h3>
+         <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.1]">
+  I'm <span className="text-[#562e66]">Divy Gandhi</span>, a builder
+  developing financial thinking through data and systems.
+</h3>
 
               <div className="space-y-8 text-white/60 text-lg md:text-xl leading-relaxed font-light">
-                <p>
-                  I design scalable <span className="text-white border-b-2 border-[#562e66]/50">Full-Stack systems</span> and operate as a
-                  <span className="text-white"> Data Analyst</span>, translating complex datasets into
-                  actionable insights for business and finance use-cases.
-                </p>
-
-                <p>
-                  My work spans <span className="text-white">Power BI dashboards</span>, financial modeling,
-                  and data pipelines that support <span className="text-white">equity research and strategic decision-making</span>.
-                  I am preparing for an MBA in Finance to formalize this intersection of analytics, engineering, and markets.
-                </p>
+            <p>
+  I build scalable <span className="text-white border-b-2 border-[#562e66]/50">Full-Stack systems</span> and analytical
+  <span className="text-white"> data tools</span>, translating complex datasets into
+  structured insights for business and finance-focused applications.
+</p>
+             <p>
+  My work includes <span className="text-white">Power BI dashboards</span>, financial data tracking,
+  and structured workflows that support <span className="text-white">investment learning and decision frameworks</span>.
+  I am preparing for an MBA in Finance to deepen this intersection of analytics, engineering, and markets.
+</p>
               </div>
             </div>
 
             {/* Capability Tags */}
             <div className="flex flex-wrap gap-3 pt-4">
               {[
-                "MERN Stack",
-                "Data Analytics & BI",
-                "Power BI Dashboards",
-                "Python & SQL",
-                "Equity Research",
-                "FinTech Systems",
-              ].map((tag) => (
+"Financial Analysis",
+"Power BI Dashboards",
+"Data Analytics & BI",
+"Python & SQL",
+"Equity Research",
+"Full-Stack Development",
+].map((tag) => (
                 <span
                   key={tag}
                   className="px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.03] text-[10px] font-mono text-white/40 uppercase tracking-widest hover:border-[#562e66] hover:text-white transition-all cursor-default"

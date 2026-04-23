@@ -3,30 +3,31 @@ import React from "react";
 const TechStack = () => {
   const stack = [
     {
-      category: "Frontend",
+      category: "Frontend & Data Visualization",
       items: ["React", "Next.js", "Tailwind CSS"],
     },
     {
-      category: "Backend & APIs",
-      items: ["Node.js", "Express", "FastAPI", "Python"],
+      category: "Backend Systems & APIs",
+      items: ["Node.js", "Express", "FastAPI", "Python","AMFI API","Razorpay"],
     },
     {
-      category: "Databases",
+      category: "Databases & Data Storage",
       items: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
     },
     {
-      category: "ML, Data & Analytics",
+      category: "Financial Data & Analytics",
       items: [
         "NumPy",
         "Pandas",
         "Scikit-learn",
         "Matplotlib",
         "Streamlit",
+        "Excel", "yfinance",
         "Power BI",
       ],
     },
     {
-      category: "DevOps, Automation & Tooling",
+      category: "Automation & Development Tools",
       items: ["Git", "Docker", "n8n"], //"Kubernetes",
     },
   ];
@@ -38,15 +39,14 @@ const TechStack = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
           <div className="space-y-4">
             <span className="text-[#562e66] font-mono text-xs font-bold uppercase tracking-[0.4em]">
-              Technical // Capabilities
+              Technical // Financial Capabilities
             </span>
             <h2 className="text-5xl md:text-7xl font-semibold tracking-tighter text-white leading-none">
               The Stack.
             </h2>
           </div>
           <p className="text-zinc-500 text-sm md:text-base max-w-xs md:text-right font-light italic">
-            "Engineered for high-performance data processing and scalable
-            financial architecture."
+            "Technical tools used to build systems for financial data analysis and decision support."
           </p>
         </div>
 

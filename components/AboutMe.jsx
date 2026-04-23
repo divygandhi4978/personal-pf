@@ -17,8 +17,7 @@ const EducationCard = () => {
           </div>
           <div className="hidden md:block text-right">
              <div className="text-white font-black text-4xl leading-none tracking-tight opacity-10">
-               CODE. SHIP. REPEAT.
-             </div>
+LEARN. ANALYZE. BUILD.             </div>
           </div>
         </div>
 
@@ -63,8 +62,8 @@ const EducationCard = () => {
               </h3>
               <div className="group flex justify-between items-center py-6 px-8 bg-white/[0.03] border border-white/5 rounded-2xl hover:bg-white/[0.05] transition-all">
                 <div>
-                  <h4 className="text-xl font-bold text-white tracking-tight">Full Stack Developer</h4>
-                  <p className="text-zinc-500 text-sm font-mono mt-1 uppercase">Early Career Stage</p>
+                  <h4 className="text-xl font-bold text-white tracking-tight">Finance & Analytics Learner</h4>
+                  <p className="text-zinc-500 text-sm font-mono mt-1 uppercase">Foundation Building Stage</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
@@ -84,28 +83,25 @@ const EducationCard = () => {
                <div className="space-y-16">
                   {/* Skill 1 */}
                   <div className="group space-y-4">
-                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Problem Solver</h4>
+                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Analytical Thinker</h4>
                     <p className="text-zinc-400 text-lg leading-relaxed font-light max-w-md">
-                      Turning complex engineering challenges into elegant, 
-                      scalable systems with a focus on clean, modular architecture.
+                      Breaking down complex financial and data problems into structured analytical systems with clarity and logical design.
                     </p>
                   </div>
 
                   {/* Skill 2 */}
                   <div className="group space-y-4">
-                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Fast Learner</h4>
+                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Structured Learner</h4>
                     <p className="text-zinc-400 text-lg leading-relaxed font-light max-w-md">
-                      Rapidly adapting to the shifting FinTech landscape and 
-                      evolving MERN stack paradigms with zero friction.
+                   Consistently building knowledge across finance, markets, and analytics through disciplined learning and structured practice.
                     </p>
                   </div>
 
                   {/* Skill 3 */}
                   <div className="group space-y-4">
-                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Detail Oriented</h4>
+                    <h4 className="text-3xl font-bold text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-300">Precision Focused</h4>
                     <p className="text-zinc-400 text-lg leading-relaxed font-light max-w-md">
-                      Ensuring absolute precision in data pipelines and high-level 
-                      quality in every line of code for mission-critical applications.
+                    Maintaining accuracy across financial data and analytical outputs to support reliable insights and disciplined decisions.
                     </p>
                   </div>
                </div>
