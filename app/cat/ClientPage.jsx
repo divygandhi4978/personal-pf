@@ -310,7 +310,12 @@ const CatPrimaryMission = () => {
 
                             </p>
 
-                        </div><div className="w-full max-w-md flex flex-col gap-3">
+                        </div>
+                        <p className="text-[#83479a] text-xl md:text-2xl font-light italic">
+
+                            Don't Code..!
+                        </p>
+                        <div className="w-full max-w-md flex flex-col gap-3">
                             {todaySchedule.map((block, i) => {
                                 const active = isActive(block);
                                 const isOpen = openBlock === block.label;
@@ -424,8 +429,8 @@ const CatPrimaryMission = () => {
                             </button>
 
                         </Link>
-                        
-                        
+
+
                         <div className="flex flex-col items-center justify-center text-center space-y-3 md:space-y-4 px-6 py-8">
 
                             <h2 className="text-[#83479a] text-3xl sm:text-3xl md:text-3xl font-light italic">
