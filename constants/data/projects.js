@@ -81,7 +81,7 @@ const list = [
   {
     head: "Investment Dashboard",
     data:
-      "Built a centralized investment dashboard to consolidate multi-asset portfolio data into a single decision view. Integrated market and NAV pipelines to improve portfolio visibility and enable structured allocation monitoring.",
+      "Built a centralized investment dashboard to consolidate multi-asset portfolio data into a single decision view. Integrated market and NAV pipelines to improve portfolio visibility and enable structured allocation monitoring. [ For now Dummy Data ]",
 
     preview: "https://finsight16.streamlit.app/",
 
