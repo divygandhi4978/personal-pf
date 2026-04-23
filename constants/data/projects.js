@@ -7,6 +7,7 @@ import webcrawler from "../images/webcrawler.png";
 import vapro from "../images/vaproshine.gif";
 import vapro_powerbi from "../images/vapro_powerbi.gif";
 import finsight from "../images/finsight.jpg";
+import inv from "../images/finsight.gif";
 
 const list = [
   {
@@ -76,6 +77,26 @@ const list = [
       "Business Intelligence",
       "DAX & Dashboard Automation",
     ],
+  },
+  {
+    head: "Investment Dashboard",
+    data:
+      "Built a centralized investment dashboard to consolidate multi-asset portfolio data into a single decision view, improving visibility across holdings and reducing manual portfolio tracking effort. Integrated market and NAV data pipelines to enable consistent portfolio monitoring and structured allocation review.",
+
+    preview: "https://finsight16.streamlit.app/",
+
+    source: null,
+
+    img: inv,
+
+    skills: [
+      "Python",
+      "Streamlit",
+      "Google Sheets",
+      "AMFI API",
+      "yfinance",
+      "Financial Data Integration"
+    ]
   },
   {
     head: "Finsight – Equity Analysis Framework",
