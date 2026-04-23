@@ -88,7 +88,7 @@ const Footer = () => {
             </a>
             
             <span className="hidden md:inline text-zinc-800">|</span>
-            <span>Last Indexed: 26 Jan 2026</span>
+            <span>Last Indexed: 23 April 2026</span>
           </div>
 
         </div>
