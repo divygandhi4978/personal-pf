@@ -25,6 +25,23 @@ const projects = [
     ],
     preview: "#",
     source: "#",
+  }, {
+    title: "Building Carvion",
+    type: "Automotive Services // Operations // Business Systems",
+
+    description:
+      "Conceptualizing Carvion as a structured automotive care brand focused on steam-based cleaning, detailing workflows, and scalable vehicle service operations.",
+
+    skills: [
+      "Service Model Design",
+      "Unit Economics Planning",
+      "Operational Workflow Structuring",
+      "Customer Acquisition Strategy",
+      "Business Systems Thinking"
+    ],
+
+    preview: "#",
+    source: "#"
   }
 ];
 
