@@ -301,6 +301,7 @@ const Projects = () => {
                   <ul className="space-y-2">
                     <li><span className="text-[#562e66] mr-2">+</span><strong className="text-white">Steam:</strong> Doorstep cleaning</li>
                     <li><span className="text-[#562e66] mr-2">+</span><strong className="text-white">Care:</strong> Scheduled maintenance</li>
+                    <li><span className="text-[#562e66] mr-2">+</span><strong className="text-white">Kit:</strong> Fragrance and Kits</li>
                   </ul>
                 </div>
 
