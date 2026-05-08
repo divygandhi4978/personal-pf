@@ -84,36 +84,164 @@ const sendMail = async ({ senderName, senderEmail, senderOrg, senderMsg }) => {
       to: senderEmail,
       subject: `Message Received - Divy Gandhi`,
       html: `
-        <!DOCTYPE html>
-        <html>
-        ${htmlHead}
-        <body>
-          <div class="wrapper">
-            <div class="header">
-              <div class="logo">DIVY<span style="color:${accent}">GANDHI</span></div>
-              <div class="hero">Thank<br/>You<span style="color:${accent}">.</span></div>
-              <p style="color:#555;font-size:14px;line-height:1.5;">Hello ${senderName}, your message has been transmitted successfully. I'll review the details and get back to you shortly.</p>
-            </div>
-            <div class="content">
-              <div class="label">Delivery Status</div>
-              <div class="value highlight">Received</div>
+<!DOCTYPE html>
+<html>
+${htmlHead}
 
-              <div class="divider"></div>
+<body style="
+  margin:0;
+  padding:0;
+  background:#f3f4f6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color:#111827;
+">
 
-              <div class="label">Your Inquiry</div>
-              <div class="message-box">
-                <p style="color:#666; font-size:13px; margin:0; line-height:1.6;">${senderMsg}</p>
-              </div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td align="center" style="padding:60px 20px;">
 
-              <a href="${baseUrl}" class="btn-primary">Return to Site</a>
+<!-- MAIN WRAPPER -->
+<table width="620" cellpadding="0" cellspacing="0" border="0" style="
+  width:620px;
+  max-width:100%;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:24px;
+  overflow:hidden;
+">
+
+  <!-- COVER -->
+  <tr>
+    <td>
+      <img
+        src="https://withdivy.vercel.app/images/Divy_Banner.png"
+        width="100%"
+        style="
+          display:block;
+          width:100%;
+          height:240px;
+          object-fit:cover;
+        "
+      />
+    </td>
+  </tr>
+
+  <!-- CONTENT -->
+  <tr>
+    <td style="padding:52px;">
+
+      <!-- TOP -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+
+          <td align="left">
+            <div style="
+              font-size:13px;
+              font-weight:700;
+              letter-spacing:1px;
+              color:#111827;
+            ">
+              DIVY<span style="color:${accent};">GANDHI</span>
             </div>
-            <div class="footer">
-              DIVY GANDHI • Digital Solutions<br/>
-              © 2026 All Rights Reserved
+          </td>
+
+          <td align="right">
+            <div style="
+              font-size:12px;
+              color:#9ca3af;
+              letter-spacing:1px;
+            ">
+              SYSTEM RESPONSE
             </div>
-          </div>
-        </body>
-        </html>
+          </td>
+
+        </tr>
+      </table>
+
+      <!-- TITLE -->
+      <div style="
+        margin-top:42px;
+        margin-bottom:26px;
+        font-size:58px;
+        line-height:0.95;
+        font-weight:700;
+        letter-spacing:-3px;
+        color:#111827;
+      ">
+        Thank You<span style="color:${accent};">.</span>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p style="
+        margin:0 0 42px 0;
+        color:#4b5563;
+        font-size:15px;
+        line-height:1.9;
+      ">
+        Hello <span style="color:#111827;font-weight:600;">${senderName}</span>, 
+        your inquiry has been successfully transmitted. I'll review the details and get back to you shortly.
+      </p>
+
+      
+
+      <!-- INQUIRY TITLE -->
+      <div style="
+        font-size:11px;
+        color:#9ca3af;
+        text-transform:uppercase;
+        letter-spacing:1.5px;
+        margin-bottom:14px;
+      ">
+        Your Inquiry
+      </div>
+
+      <!-- MESSAGE -->
+      <div style="
+        border:1px solid #e5e7eb;
+        border-radius:18px;
+        padding:28px;
+        background:#fafafa;
+        margin-bottom:42px;
+      ">
+
+        <p style="
+          margin:0;
+          color:#374151;
+          font-size:14px;
+          line-height:2;
+          white-space:pre-line;
+        ">
+          ${senderMsg}
+        </p>
+
+      </div>
+
+      <!-- BUTTON -->
+      <a href="${baseUrl}" style="
+        display:inline-block;
+        padding:16px 28px;
+        background:#111827;
+        color:#ffffff;
+        text-decoration:none;
+        border-radius:14px;
+        font-size:14px;
+        font-weight:600;
+      ">
+        Return to Site
+      </a>
+
+    </td>
+  </tr>
+
+
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
       `,
     });
 
