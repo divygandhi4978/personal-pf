@@ -113,16 +113,17 @@ ${htmlHead}
   <!-- COVER -->
   <tr>
     <td>
-      <img
-        src="https://withdivy.vercel.app/images/Divy_Banner.png"
-        width="100%"
-        style="
-          display:block;
-          width:100%;
-          height:240px;
-          object-fit:cover;
-        "
-      />
+     <img
+  src="https://withdivy.vercel.app/images/Divy_Banner.png"
+  width="100%"
+  style="
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:180px;
+    object-fit:contain;
+  "
+/>
     </td>
   </tr>
 
