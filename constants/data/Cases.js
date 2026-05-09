@@ -10,6 +10,14 @@ export const caseStudies = [
         readTime: "8 min",
         link: "/cases/cams",
     }, {
+        title: "India Is Running Out of Quality Hospital Beds",
+        category: "Corporate Strategy",
+        description:
+            "India’s hospital sector is entering a structural expansion cycle driven by a severe shortage of quality beds, rising insurance penetration, ageing demographics, and increasing lifestyle diseases. Corporate hospital chains are expanding aggressively, but this time from a position of stronger balance sheets, higher profitability, and lower leverage. The real opportunity is not just adding more beds — it is building scalable, high-return healthcare infrastructure across India’s underserved markets.",
+        date: "10 May 2026",
+        readTime: "22 min",
+        link: "https://divygandhi4978.substack.com/p/india-is-running-out-of-quality-hospital",
+    }, {
         title: "Siemens: The Digital Industrial Pivot",
         category: "Corporate Strategy",
         description:
