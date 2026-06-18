@@ -8,6 +8,7 @@ import vapro from "../images/vaproshine.gif";
 import vapro_powerbi from "../images/vapro_powerbi.gif";
 import finsight from "../images/finsight.jpg";
 import inv from "../images/finsight.gif";
+import vapro_agent from "../images/vapro_agent.png";
 
 const list = [
   {
@@ -64,6 +65,24 @@ const list = [
       whyMBA:
         "The project showed me that data highlights problems, but strategic and financial judgment drives outcomes. I want an MBA to build that decision-making capability.",
     },
+  },
+  {
+    head: "VaproShine - AI BI Copilot",
+    data: "An AI-powered business intelligence copilot built as an extension to the VaproShine platform. It analyzes bookings, revenue, customers, feedback, leads, and coupons to answer business questions and generate actionable recommendations in natural language.",
+
+    source: "https://www.linkedin.com/posts/divygandhi4978_agenticai-businessintelligence-dataanalytics-ugcPost-7473268132959145984-4mOn/",
+    preview: null,
+
+    img: vapro_agent,
+
+    skills: [
+      "Business Intelligence",
+      "Data Analytics",
+      "LLMs",
+      "Python",
+      "KPI Design",
+      "Decision Support Systems"
+    ],
   },
   {
     head: "VaproShine - PowerBI Dashboard",
